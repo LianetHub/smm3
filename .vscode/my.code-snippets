@@ -302,7 +302,14 @@
 			"font-family: $$font2;"
 		],
 		"description": "fff2"
-	}
+	},
+	"dropdown": {
+		"prefix": "dropdown",
+		"body": [
+			"<div class=\"dropdown\">\n\t<button type=\"button\" class=\"dropdown__button\" aria-expanded=\"false\" aria-haspopup=\"true\">Русский</button>\n\t<div class=\"dropdown__content\" aria-hidden=\"true\">\n\t\t<ul class=\"dropdown__list\" role=\"listbox\">\n\t\t\t<li role=\"option\" data-value=\"Английский\" class=\"dropdown__list-item\">Английский</li>\n\t\t</ul>\n\t\t<input type=\"text\" name=\"lang\" id=\"lang\" class=\"dropdown__input hidden\" hidden value=\"Русский\">\n\t</div>\n</div>"
+		],
+		"description": "dropdown"
+	},
 }
 
 

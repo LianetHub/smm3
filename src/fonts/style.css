@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'icons';
+  src:  url('fonts/icons.eot?wv7fc2');
+  src:  url('fonts/icons.eot?wv7fc2#iefix') format('embedded-opentype'),
+    url('fonts/icons.ttf?wv7fc2') format('truetype'),
+    url('fonts/icons.woff?wv7fc2') format('woff'),
+    url('fonts/icons.svg?wv7fc2#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-archive-tick:before {
+  content: "\e900";
+}
+.icon-butterfly:before {
+  content: "\e901";
+}
+.icon-category:before {
+  content: "\e902";
+}
+.icon-chevron:before {
+  content: "\e903";
+}
+.icon-connection:before {
+  content: "\e904";
+}
+.icon-gem:before {
+  content: "\e905";
+}
+.icon-key:before {
+  content: "\e906";
+}

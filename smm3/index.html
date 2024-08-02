@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
-<head itemscope="" itemtype="http://schema.org/WPHeader">
-	<title itemprop="headline"></title>
+<head>
+	<title></title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,11 +10,11 @@
 	<meta name="description" itemprop="description" content="описание страницы">
 	<meta name="keywords" itemprop="keywords" content="ключевые слова">
 	<!-- favicon -->
-	<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 	<link rel="manifest" href="/site.webmanifest">
-	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#7546b8">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="theme-color" content="#ffffff">
 	<!-- favicon -->
@@ -23,7 +23,7 @@
 	<meta property="og:title" content="">
 	<meta property="og:description" content="">
 	<meta property="og:url" content="">
-	<meta property="og:image" content="/OG.png">
+	<meta property="og:image" content="">
 	<meta property="og:image:width" content="1200">
 	<meta property="og:image:height" content="627">
 	<meta property="og:site_name" content="">
@@ -35,40 +35,325 @@
 	<meta property="twitter:description" content="">
 	<meta property="twitter:site" content="">
 	<meta property="twitter:url" content="">
-	<meta property="twitter:image:src" content="/OG.png">
+	<meta property="twitter:image:src" content="">
 	<!-- Twitter -->
 	<!-- plugnis -->
-	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240802004113">
-	<link rel="stylesheet" href="css/libs/fancybox.css?_v=20240802004113">
-	<link rel="stylesheet" href="css/libs/nouislider.min.css?_v=20240802004113">
+	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240802225317">
+	<link rel="stylesheet" href="css/libs/fancybox.css?_v=20240802225317">
 	<!-- plugnis -->
-	<link rel="stylesheet" href="css/reset.min.css?_v=20240802004113">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240802004113">
-	<!-- <script type="text/javascript" src="dat.gui.min.js?_v=20240802004113"></script> -->
+	<link rel="stylesheet" href="css/reset.min.css?_v=20240802225317">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240802225317">
 </head>
 
 <body>
-	<section class="wrapper">
-		<canvas id="canvas" class="canvas"></canvas>
+	<canvas id="canvas" class="canvas"></canvas>
+	<div class="wrapper">
 		<header class="header">
 			<div class="header__container">
+				<a href="/" class="header__logo">
+					<span class="header__logo-icon">
+						<picture>
+							<source srcset="img/butterfly.webp" type="image/webp"><img src="img/butterfly.png" alt="logo icon">
+						</picture>
+					</span> Smm3 </a>
+				<div class="header__select dropdown">
+					<button type="button" class="dropdown__button icon-chevron" aria-expanded="false" aria-haspopup="true"> ENG </button>
+					<div class="dropdown__content" aria-hidden="true">
+						<ul class="dropdown__list" role="listbox">
+							<li role="option" data-value="ENG" aria-checked="true" class="dropdown__list-item">ENG</li>
+							<li role="option" data-value="RUS" class="dropdown__list-item">RUS</li>
+						</ul>
+						<input type="text" name="lang" id="lang" class="dropdown__input hidden" hidden="" value="Казахский">
+					</div>
+				</div>
+				<div class="header__menu menu">
+					<nav aria-label="menu" class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a href="" class="menu__link icon-category"> Services </a>
+							</li>
+							<li class="menu__item">
+								<a href="" class="menu__link icon-connection"> API </a>
+							</li>
+						</ul>
+					</nav>
+					<div class="menu__actions">
+						<a href="" class="menu__action btn btn-secondary">Sign in</a>
+						<a href="" class="menu__action btn btn-primary">Sign UP</a>
+					</div>
+				</div>
+				<button type="button" aria-label="Open mobile menu" class="menu__icon icon-menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
 			</div>
 		</header>
 		<main class="page">
+			<section class="main">
+				<div class="main__container">
+					<div class="main__label icon-gem"> Excellent Panel </div>
+					<h1 class="main__title"> Cheap SMM services with <span class="main__title-icon">
+							<picture>
+								<source srcset="img/rocket-emoji.webp" type="image/webp"><img src="img/rocket-emoji.png" alt="emoji">
+							</picture>
+						</span>
+						<span class="color-green">fast delivery</span>
+					</h1>
+					<p class="main__subtitle"> A diverse range of SMM services for various social&nbsp;media platforms. </p>
+					<form action="#" class="main__form form">
+						<input type="text" name="login" class="form__input" placeholder="Login">
+						<input type="password" name="psw" class="form__input" placeholder="Password">
+						<div class="main__form-side">
+							<label class="form__checkbox" data-tooltip="" title="Remember me">
+								<input type="checkbox" name="remember" class="form__checkbox-input hidden" hidden="">
+								<span class="form__checkbox-btn icon-archive-tick"></span>
+							</label>
+							<label class="form__checkbox" data-tooltip="" title="Key">
+								<input type="checkbox" name="key" class="form__checkbox-input hidden" hidden="">
+								<span class="form__checkbox-btn icon-key"></span>
+							</label>
+							<div class="form__column">
+								<button type="submit" class="form__btn btn btn-primary btn-lg icon-butterfly">Sign in</button>
+								<div class="form__sign"> No account? <a href="login.html" class="form__sign-link">Sign Up</a>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</section>
+			<section class="reasons">
+				<div class="reasons__container">
+					<div class="section-header">
+						<h2 class="section-header__title title"> Reasons why you should try&nbsp;our panel </h2>
+						<p class="section-header__desc"> Let us help you build your online presence quickly&nbsp;and efficiently. </p>
+					</div>
+					<div class="reasons__items swiper">
+						<div class="swiper-wrapper">
+							<div class="reasons__item swiper-slide">
+								<div class="reasons__item-icon">
+									<div class="reasons__item-icon-content">
+										<img src="img/reasons/01.svg" alt="icon">
+									</div>
+								</div>
+								<h3 class="reasons__item-caption title-sm">High quality</h3>
+								<p class="reasons__item-desc"> Customers can always purchase high-quality SMM services. </p>
+								<a href="" class="reasons__item-btn btn btn-primary btn-lg">TRY High quality</a>
+							</div>
+							<div class="reasons__item swiper-slide">
+								<div class="reasons__item-icon">
+									<div class="reasons__item-icon-content">
+										<img src="img/reasons/02.svg" alt="icon">
+									</div>
+								</div>
+								<h3 class="reasons__item-caption title-sm">Multiple payment systems</h3>
+								<p class="reasons__item-desc"> You can add funds via a payment option you prefer. </p>
+								<a href="" class="reasons__item-btn btn btn-primary btn-lg">Try Multiple payment systems </a>
+							</div>
+							<div class="reasons__item swiper-slide">
+								<div class="reasons__item-icon">
+									<div class="reasons__item-icon-content">
+										<img src="img/reasons/03.svg" alt="icon">
+									</div>
+								</div>
+								<h3 class="reasons__item-caption title-sm">Unbelievable prices</h3>
+								<p class="reasons__item-desc"> We keep our prices low to meet customers' needs. </p>
+								<a href="" class="reasons__item-btn btn btn-primary btn-lg">Try Unbelievable prices</a>
+							</div>
+							<div class="reasons__item swiper-slide">
+								<div class="reasons__item-icon">
+									<div class="reasons__item-icon-content">
+										<img src="img/reasons/04.svg" alt="icon">
+									</div>
+								</div>
+								<h3 class="reasons__item-caption title-sm">Fast delivery</h3>
+								<p class="reasons__item-desc"> Very fast order processing on our&nbsp;panel ensures quick results. </p>
+								<a href="" class="reasons__item-btn btn btn-primary btn-lg">Try Fast delivery</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="place">
+				<div class="place__container">
+					<div class="section-header">
+						<h2 class="section-header__title title"> How can I place my orders? </h2>
+						<p class="section-header__desc"> Give your business a new height following these&nbsp;4&nbsp;easy steps. </p>
+					</div>
+					<ol class="place__list">
+						<li class="place__item">
+							<div class="place__item-icon">
+								<img src="img/place/01.svg" alt="icon">
+							</div>
+							<h3 class="place__item-title title-sm">Sign up &amp; log in</h3>
+							<p class="place__item-text"> Please <a href="">Sign Up</a> and then <a href="">Sign In</a> to your account. </p>
+						</li>
+						<li class="place__item">
+							<div class="place__item-icon">
+								<img src="img/place/02.svg" alt="icon">
+							</div>
+							<h3 class="place__item-title title-sm">Adding funds</h3>
+							<p class="place__item-text"> Add funds to your account via a payment method you choose. </p>
+						</li>
+						<li class="place__item">
+							<div class="place__item-icon">
+								<img src="img/place/03.svg" alt="icon">
+							</div>
+							<h3 class="place__item-title title-sm">Choose a service</h3>
+							<p class="place__item-text"> Place orders and get ready to receive more publicity on social media. </p>
+						</li>
+						<li class="place__item">
+							<div class="place__item-icon">
+								<img src="img/place/04.svg" alt="icon">
+							</div>
+							<h3 class="place__item-title title-sm">Enjoy superb results</h3>
+							<p class="place__item-text"> When your order is complete, you can enjoy incredible results. </p>
+						</li>
+					</ol>
+				</div>
+			</section>
+			<section class="reviews">
+				<div class="reviews__container">
+					<div class="section-header">
+						<h2 class="section-header__title title"> See what our customers&nbsp;say </h2>
+						<p class="section-header__desc"> We always strive to ensure our customers stay&nbsp;satisfied with our services. </p>
+					</div>
+					<div class="reviews__slider swiper">
+						<div class="swiper-wrapper">
+							<div class="reviews__slide swiper-slide">
+								<div class="reviews__slide-name title-sm"> Nicole Withers </div>
+								<div class="reviews__slide-rates">
+									<div class="reviews__slide-rate">
+										<img src="img/star.svg" alt="star">
+									</div>
+									<div class="reviews__slide-rate">
+										<img src="img/star.svg" alt="star">
+									</div>
+									<div class="reviews__slide-rate">
+										<img src="img/star.svg" alt="star">
+									</div>
+									<div class="reviews__slide-rate">
+										<img src="img/star.svg" alt="star">
+									</div>
+									<div class="reviews__slide-rate">
+										<img src="img/star.svg" alt="star">
+									</div>
+								</div>
+								<blockquote class="reviews__slide-quote"> These guys helped my clothing boutique a lot, I've been getting a lot more customers and orders because my boutique is so much easier to notice now. </blockquote>
+							</div>
+							<div class="reviews__slide swiper-slide">
+								<div class="reviews__slide-name title-sm"> Maria Sousa </div>
+								<div class="reviews__slide-rates">
+									<div class="reviews__slide-rate">
+										<img src="img/star.svg" alt="star">
+									</div>
+									<div class="reviews__slide-rate">
+										<img src="img/star.svg" alt="star">
+									</div>
+									<div class="reviews__slide-rate">
+										<img src="img/star.svg" alt="star">
+									</div>
+									<div class="reviews__slide-rate">
+										<img src="img/star.svg" alt="star">
+									</div>
+									<div class="reviews__slide-rate">
+										<img src="img/star.svg" alt="star">
+									</div>
+								</div>
+								<blockquote class="reviews__slide-quote"> It was such a struggle for me to figure out how to give my business a boost on Instagram. Options I had were either too expensive or not that effective. But finding this SMM panel helped me so much! &nbsp;Can't recommed it enough. </blockquote>
+							</div>
+							<div class="reviews__slide swiper-slide">
+								<div class="reviews__slide-name title-sm"> Blaine Rojas </div>
+								<div class="reviews__slide-rates">
+									<div class="reviews__slide-rate">
+										<img src="img/star.svg" alt="star">
+									</div>
+									<div class="reviews__slide-rate">
+										<img src="img/star.svg" alt="star">
+									</div>
+									<div class="reviews__slide-rate">
+										<img src="img/star.svg" alt="star">
+									</div>
+									<div class="reviews__slide-rate">
+										<img src="img/star.svg" alt="star">
+									</div>
+									<div class="reviews__slide-rate">
+										<img src="img/star.svg" alt="star">
+									</div>
+								</div>
+								<blockquote class="reviews__slide-quote"> If you're a business owner, you know what it's like when you have a lot going on at once and you can't find extra time to grow your social media accs. It can also get kinda pricey when you hire an SMM agency to do it for you. But this SMM panel helped me so much! </blockquote>
+							</div>
+							<div class="reviews__slide swiper-slide">
+								<div class="reviews__slide-name title-sm"> Nicole Withers </div>
+								<div class="reviews__slide-rates">
+									<div class="reviews__slide-rate">
+										<img src="img/star.svg" alt="star">
+									</div>
+									<div class="reviews__slide-rate">
+										<img src="img/star.svg" alt="star">
+									</div>
+									<div class="reviews__slide-rate">
+										<img src="img/star.svg" alt="star">
+									</div>
+									<div class="reviews__slide-rate">
+										<img src="img/star.svg" alt="star">
+									</div>
+									<div class="reviews__slide-rate">
+										<img src="img/star.svg" alt="star">
+									</div>
+								</div>
+								<blockquote class="reviews__slide-quote"> It blows my mind that SMM services on this panel are so cheap! Their quality is very high and they helped me a lot with increasing my sales. Will be buying again! </blockquote>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="faq">
+				<div class="faq__container">
+					<div class="section-header">
+						<h2 class="section-header__title title"> Popular questions on&nbsp;our panel </h2>
+						<p class="section-header__desc"> Our staff picked some of the most asked questions about SMM panels and replied to them. </p>
+					</div>
+					<ul class="faq__list">
+						<li class="faq__item">
+							<button type="button" class="faq__item-question"> What makes SMM panels so&nbsp;useful? </button>
+							<p class="faq__item-answer"> Using Drip-feed, people can build the engagement on their accounts at the speed that they want. Let's say you need 1000 likes on your post, you don't have to get them all at once — it can happen gradually, for example, 100 likes each day for 10 days. </p>
+						</li>
+						<li class="faq__item">
+							<button type="button" class="faq__item-question">What SMM services do you offer on your panel?</button>
+							<p class="faq__item-answer"> Using Drip-feed, people can build the engagement on their accounts at the speed that they want. Let's say you need 1000 likes on your post, you don't have to get them all at once — it can happen gradually, for example, 100 likes each day for 10 days. </p>
+						</li>
+						<li class="faq__item">
+							<button type="button" class="faq__item-question">Is it safe to use SMM services on your panel?</button>
+							<p class="faq__item-answer"> Using Drip-feed, people can build the engagement on their accounts at the speed that they want. Let's say you need 1000 likes on your post, you don't have to get them all at once — it can happen gradually, for example, 100 likes each day for 10 days. </p>
+						</li>
+						<li class="faq__item">
+							<button type="button" class="faq__item-question">What makes SMM panels so useful?</button>
+							<p class="faq__item-answer"> Using Drip-feed, people can build the engagement on their accounts at the speed that they want. Let's say you need 1000 likes on your post, you don't have to get them all at once — it can happen gradually, for example, 100 likes each day for 10 days. </p>
+						</li>
+						<li class="faq__item">
+							<button type="button" class="faq__item-question">What does "Drip-feed" mean?</button>
+							<p class="faq__item-answer"> Using Drip-feed, people can build the engagement on their accounts at the speed that they want. Let's say you need 1000 likes on your post, you don't have to get them all at once — it can happen gradually, for example, 100 likes each day for 10 days. </p>
+						</li>
+						<li class="faq__item">
+							<button type="button" class="faq__item-question">Mass orders — what are they?</button>
+							<p class="faq__item-answer"> Using Drip-feed, people can build the engagement on their accounts at the speed that they want. Let's say you need 1000 likes on your post, you don't have to get them all at once — it can happen gradually, for example, 100 likes each day for 10 days. </p>
+						</li>
+					</ul>
+				</div>
+			</section>
 		</main>
 		<footer class="footer">
-			<div class="footer__container">
-			</div>
+			<div class="footer__container"> smm3.ru © 2024 All Rights Reserved. </div>
 		</footer>
-		<div id="consult" class="popup">
-		</div> <!-- plugnis -->
-		<script src="js/libs/swiper-bundle.min.js?_v=20240802004113"></script>
-		<script src="js/libs/fancybox.umd.js?_v=20240802004113"></script>
-		<!-- <script src="js/libs/dat.gui.min.js?_v=20240802004113"></script> -->
-		<script src="js/libs/webgl.js?_v=20240802004113"></script>
-		<!-- plugnis -->
-		<script src="js/app.min.js?_v=20240802004113"></script>
-	</section>
+	</div>
+	<div id="consult" class="popup">
+	</div> <!-- plugnis -->
+	<script src="js/libs/swiper-bundle.min.js?_v=20240802225317"></script>
+	<script src="js/libs/fancybox.umd.js?_v=20240802225317"></script>
+	<script src="js/libs/webgl.js?_v=20240802225317"></script>
+	<!-- plugnis -->
+	<script src="js/app.min.js?_v=20240802225317"></script>
 </body>
 
 </html>

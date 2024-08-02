@@ -3,114 +3,120 @@
 // @import "modules/breadcrumbs";
 // @import "modules/before-slider";
 // @import "modules/datepicker";
-// @import "modules/select";
-// @import "modules/animation";
+@import "modules/select";
+@import "modules/tooltip";
 
 //============ МОДУЛИ ====================
-
-.title {
-	font-weight: 500;
-	line-height: 130%;
-	font-size: 1.625rem;
-	letter-spacing: -0.04875rem;
-	@media (min-width: $md4) {
-		letter-spacing: -0.0675rem;
-		font-size: 2.25rem;
-	}
-	& span {
-		border-radius: 6.25rem;
-		background: #e5ddf1;
-		display: inline-block;
-		padding: 0 0.25rem;
-	}
-}
-
-.subtitle {
-	line-height: 155%;
-	font-size: 1rem;
-	margin: 1.88rem 0 0 0;
-	@media (min-width: $md4) {
-		margin: 3.13rem auto 0;
-		max-width: rem(460);
-	}
-}
 
 .color-accent {
 	color: $accent;
 }
 
-.label {
-	position: absolute;
-	top: 0.63rem;
-	left: 0.63rem;
-	color: #31446a;
+.color-green {
+	color: $green;
+}
+
+.title {
 	font-weight: 600;
-	line-height: 130%;
-	padding: 0.25rem 0.75rem;
-	background: #fff;
-	border-radius: 1.25rem;
-	font-size: 1rem;
-	@media (min-width: $md5) {
-		font-size: rem(13);
-	}
-	@media (min-width: $md3) {
-		font-size: 1rem;
-	}
-	&.label_green {
-		color: #fff;
-		background: $accent;
+	line-height: 93%;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	letter-spacing: -0.075rem;
+	@media (min-width: $md4) {
+		letter-spacing: -0.13125rem;
+		font-size: 2.625rem;
 	}
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-	position: static;
-	top: auto;
-	left: auto;
-	margin: 0;
-	transform: none;
-	transition: color 0.3s ease 0s;
-	color: inherit;
-	border-radius: 50%;
-
-	transition: color 0.3s ease 0s, opacity 0.3s ease 0s, background-color 0.3s ease 0s, border-color 0.3s ease 0s;
-
-	background: $accent;
-	color: #fff;
-	z-index: 2;
-	width: 2.25rem;
-	height: 2.25rem;
-	&::after {
-		font-size: 0.875rem;
-	}
-	@media (min-width: $md3) {
-		width: 3.125rem;
-		height: 3.125rem;
-		&::after {
-			font-size: 1rem;
-		}
+.title-sm {
+	font-weight: 600;
+	line-height: 93%;
+	letter-spacing: -0.075rem;
+	text-transform: uppercase;
+	font-size: 1.125rem;
+	@media (min-width: $md4) {
+		font-size: 1.5rem;
 	}
 }
 
-.swiper-pagination {
-	position: static;
-	bottom: auto;
-	padding: 1.25rem 0;
+.section-header {
 	display: flex;
-	justify-content: center;
-	.swiper-pagination-bullet {
-		position: relative;
-		width: 0.625rem;
-		height: 0.625rem;
-		--swiper-pagination-bullet-horizontal-gap: 0.18rem;
-		background: #fff;
-		opacity: 1;
-		transition: all 0.3s ease 0s;
-		&.swiper-pagination-bullet-active {
-			background: $accent;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	gap: 1rem;
+	@media (min-width: $md4) {
+		text-align: left;
+		justify-content: space-between;
+		flex-direction: row;
+	}
+	// .section-header__title
+	&__title {
+		max-width: 28rem;
+	}
+	// .section-header__desc
+	&__desc {
+		color: rgba(255, 255, 255, 0.51);
+		font-weight: 300;
+		line-height: 131%;
+		font-size: 1rem;
+		@media (min-width: $md4) {
+			font-size: 1.125rem;
+			text-align: right;
+			max-width: 22rem;
 		}
 	}
 }
+
+// .swiper-button-next,
+// .swiper-button-prev {
+// 	position: static;
+// 	top: auto;
+// 	left: auto;
+// 	margin: 0;
+// 	transform: none;
+// 	transition: color 0.3s ease 0s;
+// 	color: inherit;
+// 	border-radius: 50%;
+
+// 	transition: color 0.3s ease 0s, opacity 0.3s ease 0s, background-color 0.3s ease 0s, border-color 0.3s ease 0s;
+
+// 	background: $accent;
+// 	color: #fff;
+// 	z-index: 2;
+// 	width: 2.25rem;
+// 	height: 2.25rem;
+// 	&::after {
+// 		font-size: 0.875rem;
+// 	}
+// 	@media (min-width: $md3) {
+// 		width: 3.125rem;
+// 		height: 3.125rem;
+// 		&::after {
+// 			font-size: 1rem;
+// 		}
+// 	}
+// }
+
+// .swiper-pagination {
+// 	position: static;
+// 	bottom: auto;
+// 	padding: 1.25rem 0;
+// 	display: flex;
+// 	justify-content: center;
+// 	.swiper-pagination-bullet {
+// 		position: relative;
+// 		width: 0.625rem;
+// 		height: 0.625rem;
+// 		--swiper-pagination-bullet-horizontal-gap: 0.18rem;
+// 		background: #fff;
+// 		opacity: 1;
+// 		transition: all 0.3s ease 0s;
+// 		&.swiper-pagination-bullet-active {
+// 			background: $accent;
+// 		}
+// 	}
+// }
 
 // .pc-only {
 // 	@media (max-width: $md4) {
@@ -320,9 +326,10 @@ $scrollbarHover: darken(
 
 ::-webkit-scrollbar {
 	width: rem(8);
+	display: none;
 }
 ::-webkit-scrollbar-track {
-	background: #fff;
+	background: #000;
 }
 ::-webkit-scrollbar-thumb {
 	background: $scrollbarColor;

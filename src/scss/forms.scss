@@ -1,110 +1,35 @@
 .form {
-	display: flex;
-	flex-direction: column;
-
 	// .form__input
 	&__input {
 		text-overflow: ellipsis;
 		transition: border-color 0.3s ease 0s, color 0.3s ease 0s, outline 0.3s ease 0s;
 		width: 100%;
-		background: #fff;
-		border-radius: 0.9375rem;
-		color: rgba(49, 68, 106, 1);
-		line-height: 155%;
-		padding: 1.25rem 0.94rem;
-		font-size: 1rem;
+		background: transparent;
+		border-radius: 0.5rem;
+		color: #fff;
+		border: rem(1) solid rgba(255, 255, 255, 0.27);
+		background: rgba(0, 0, 0, 0.33);
+		box-shadow: 0 0 0.25rem 0 rgba(23, 25, 28, 0.05);
+		padding: 0.75rem 1rem;
+		font-size: 0.9375rem;
 
-		@media (min-width: $md2) {
-			font-size: 1.125rem;
-		}
-		&.form__input_gray {
-			background: #f8f8f8;
-		}
+		font-weight: 300;
 		&:focus {
-			outline: rem(2) solid rgba($color: #000, $alpha: 0.75);
+			border: rem(1) solid $green;
 		}
-		&:hover,
-		&:focus {
-			border-color: #039;
-		}
+
 		&::placeholder {
-			color: rgba(49, 68, 106, 0.5);
-			opacity: 1;
+			color: inherit;
+			opacity: 0.7;
 		}
 		&:disabled {
-			background: #ddd;
-			border-color: #ddd;
+			opacity: 0.5;
 		}
 		&._error {
 			outline: 1px solid #ba2028;
-			background: #fff1ed;
 		}
 	}
 
-	// .form__textarea
-	&__textarea {
-		resize: vertical;
-		text-overflow: ellipsis;
-		transition: border-color 0.3s ease 0s, color 0.3s ease 0s;
-		width: 100%;
-		background: #fff;
-		color: $dark;
-		padding: 1.2rem 0.75rem;
-		line-height: 140%;
-		border-radius: 0.25rem;
-		font-size: 0.875rem;
-		height: rem(107);
-		@media (min-width: $md5) {
-			font-size: 1rem;
-			height: 9rem;
-		}
-		@media (min-width: $md2) {
-			font-size: 1.125rem;
-		}
-		&.form__textare_sm {
-			font-size: 0.875rem;
-			padding: 1rem 0.75rem;
-			height: 6.6875rem;
-		}
-		&:focus {
-			outline: rem(2) solid rgba($color: #000, $alpha: 0.75);
-		}
-		&:hover,
-		&:focus {
-			border-color: #039;
-		}
-		&::placeholder {
-			color: rgba(49, 68, 106, 0.5);
-			opacity: 1;
-		}
-		&:disabled {
-			background: #dfe0e1;
-			border-color: #dfe0e1;
-		}
-		&._error {
-			background: #fff1ed;
-			border-color: #fff1ed;
-		}
-	}
-
-	// .form__footer
-	&__footer {
-		display: flex;
-		gap: 0.91rem;
-		flex-direction: column;
-		margin-top: 1rem;
-		@media (min-width: $md5) {
-			flex-direction: row;
-			justify-content: space-between;
-			align-items: center;
-		}
-		@media (min-width: $md2) {
-			margin-top: 2rem;
-		}
-		.btn {
-			min-height: 4.6875rem;
-		}
-	}
 	// .form__checkbox
 	&__checkbox {
 		display: block;
@@ -128,47 +53,55 @@
 	// .form__checkbox-input
 	&__checkbox-input {
 		&:checked {
-			& + .form__checkbox-content {
-				&::before {
-					background-color: #fff;
-					background-image: url("@img/icons/check.svg");
-				}
+			& + .form__checkbox-btn {
+				border-color: transparent;
+				background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 100%), linear-gradient(0deg, #5068ee, #5068ee), rgba(26, 37, 86, 0.47);
 			}
 		}
 	}
 
-	// .form__checkbox-content
-	&__checkbox-content {
+	// .form__checkbox-btn
+	&__checkbox-btn {
 		position: relative;
 		display: block;
-		width: fit-content;
-		font-size: 0.875rem;
-		padding-left: 1.81rem;
+		width: 2.6875rem;
+		height: 2.6875rem;
+		border-radius: 0.5rem;
+		box-shadow: 0 0 0.25rem 0 rgba(23, 25, 28, 0.05);
 		line-height: 155%;
 		cursor: pointer;
 		user-select: none;
-		&::before {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			border: rem(2) solid #fff;
-			border-radius: rem(2);
-			width: 1.25rem;
-			height: 1.25rem;
-			background-size: contain;
-			background-repeat: no-repeat;
-			background-position: center;
+		color: #fff;
+		border: rem(1) solid rgba(255, 255, 255, 0.27);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	// .form__column
+	&__column {
+		flex: 1 1 auto;
+	}
+	// .form__btn
+	&__btn {
+		width: 100%;
+	}
+	// .form__sign
+	&__sign {
+		display: none;
+		@media (min-width: $md4) {
+			display: block;
+			margin-top: 0.63rem;
+			font-size: 0.875rem;
+			line-height: 101%;
 		}
-		& a {
-			text-decoration: underline;
-			@media (any-hover: hover) {
-				&:hover {
-					text-decoration: none;
-				}
+	}
+	// .form__sign-link
+	&__sign-link {
+		font-weight: 600;
+		color: #5068ee;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
 			}
 		}
 	}
@@ -183,21 +116,34 @@
 	text-align: center;
 	user-select: none;
 	transition: all 0.3s ease 0s;
-	border-radius: 6.25rem;
-	font-size: 0.9375rem;
+	gap: 0.31rem;
+	flex-shrink: 0;
+	white-space: nowrap;
+	font-size: 0.75rem;
 	font-weight: 600;
-	line-height: 130%;
-	padding: 1.15rem 1.8rem;
-	gap: 0.62rem;
-	&::before {
-		font-size: 1.125rem;
-	}
+	text-transform: uppercase;
+	padding: 0.45rem 2.22rem;
+	border-radius: 0.5rem;
+	box-shadow: 0 0 0.25rem 0 rgba(23, 25, 28, 0.05);
 	&.btn-primary {
-		background: $accent;
 		color: #fff;
-		@media (any-hover: hover) {
-			&:hover {
-				background: #442273;
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 100%), #5068ee;
+			border-radius: 0.5rem;
+			transition: opacity 0.3s ease 0s;
+			z-index: -1;
+		}
+		background: #5068ee;
+		&:hover,
+		&:active {
+			&::after {
+				opacity: 0;
 			}
 		}
 		&:disabled,
@@ -206,27 +152,27 @@
 		}
 	}
 
-	&.btn-primary-outline {
-		background: transparent;
-		border: 1px solid $accent;
-		color: $accent;
-		@media (any-hover: hover) {
-			&:hover {
-				border: 1px solid #442273;
-				color: #442273;
-			}
-		}
-	}
 	&.btn-secondary {
-		background: #f3f2f2;
-		color: $text;
-		@media (any-hover: hover) {
-			&:hover {
-				background: darken($color: #f3f2f2, $amount: 10);
-			}
+		color: #fff;
+		border: rem(1) solid rgba(255, 255, 255, 0.34);
+
+		&:hover,
+		&:active {
+			background: #5068ee;
+			border-color: #5068ee;
+			color: #fff;
 		}
 	}
-
+	&.btn-lg {
+		padding: 0.85rem 2rem;
+		@media (min-width: $md4) {
+			padding: 0.85rem 4.56rem;
+		}
+		font-size: 0.8125rem;
+		&::before {
+			font-size: 1rem;
+		}
+	}
 	&:disabled,
 	&[aria-disabled="true"] {
 		cursor: default;

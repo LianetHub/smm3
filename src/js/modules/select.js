@@ -19,7 +19,7 @@ export const select = () => {
         const dropdownItems = dropdownList.querySelectorAll('.dropdown__list-item');
         const dropdownInput = dropdown.querySelector('.dropdown__input');
 
-        // Setting ARIA attributes
+        // Установка ARIA атрибутов
         dropdown.setAttribute('role', 'listbox');
         dropdownItems.forEach(item => item.setAttribute('role', 'option'));
 
@@ -28,19 +28,18 @@ export const select = () => {
             toggleDropdown(dropdown, !isOpen);
         });
 
-        dropdownItems.forEach(item => {
-            item.addEventListener('click', e => {
-                dropdownItems.forEach(el => {
-                    el.classList.remove('active');
-                    el.removeAttribute('aria-checked');
+        dropdownList.addEventListener('click', e => {
+            if (e.target.classList.contains('dropdown__list-item')) {
+                const selectedItem = e.target;
+                dropdownItems.forEach(item => {
+                    item.removeAttribute('aria-checked');
                 });
-                item.classList.add('active');
-                item.setAttribute('aria-checked', 'true');
-                dropdownBtn.innerHTML = item.innerHTML;
-                dropdownInput.value = item.dataset.value;
+                selectedItem.setAttribute('aria-checked', 'true');
+                dropdownBtn.innerHTML = selectedItem.innerHTML;
+                dropdownInput.value = selectedItem.dataset.value;
                 toggleDropdown(dropdown, false);
                 dropdownInput.dispatchEvent(new Event('change'));
-            });
+            }
         });
     };
 
@@ -60,7 +59,7 @@ export const select = () => {
         }
     };
 
-    // Initialization
+    // Инициализация
     document.querySelectorAll('.dropdown').forEach(setupDropdown);
     document.addEventListener('click', closeAllDropdownsOnClickOutside);
     document.addEventListener('keydown', closeAllDropdownsOnEscape);

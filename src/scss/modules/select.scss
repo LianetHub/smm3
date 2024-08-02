@@ -9,22 +9,20 @@
 	&__button {
 		position: relative;
 		cursor: pointer;
-		background: #ffffff;
-		border: rem(1) solid #fff;
-		transition: all 0.3s ease 0s;
-		color: #1f2b32;
-		width: 100%;
-		font-size: 0.875rem;
-		@media (min-width: $md5) {
-			font-size: 1.125rem;
+		border: rem(1) solid rgba(255, 255, 255, 0.34);
+		box-shadow: 0 0 0.25rem 0 rgba(23, 25, 28, 0.05);
+		z-index: 1;
+		padding: 0.45rem 0.25rem 0.45rem 0.56rem;
+		@media (min-width: $md4) {
+			padding: 0.45rem 0.88rem;
 		}
-		line-height: 140%;
-		border-radius: rem(12);
-		padding: 1rem 0.75rem;
+		font-size: 0.875rem;
+		border-radius: 0.5rem;
+		font-weight: 600;
+		gap: 0.19rem;
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
-		z-index: 1;
+		text-transform: uppercase;
 		&.selected {
 			color: #232c32;
 		}
@@ -32,8 +30,7 @@
 			transition: transform 0.3s ease 0s;
 			@extend %ic, .icon-chevron;
 			order: 1;
-			color: $accent;
-			font-size: 1.5rem;
+			color: rgba($color: #fff, $alpha: 0.42);
 		}
 		&:not(.active) {
 			&:hover {
@@ -52,11 +49,13 @@
 		top: calc(100% + 0.25rem);
 		width: 100%;
 		z-index: 4;
-		border-radius: 0.75rem;
-		padding: 1.25rem 0.62rem;
-		border: rem(1) solid #dfe0e1;
-		background: #fff;
-		transition: 200ms ease;
+		padding: 0.72rem 0.94rem;
+		font-size: 0.875rem;
+		font-weight: 600;
+		border-radius: 0.25rem;
+		border: rem(1) solid rgba(255, 255, 255, 0.34);
+		background: #000;
+		transition: all 0.2s ease 0s;
 		opacity: 0;
 		visibility: hidden;
 		overflow: hidden;
@@ -69,16 +68,7 @@
 			display: flex;
 			align-items: center;
 			gap: 0.31rem;
-			&::before {
-				@extend %ic, .icon-check-sm;
-				visibility: hidden;
-				font-size: 1.5rem;
-				width: 1.5rem;
-				height: 1.5rem;
-				flex-shrink: 0;
-				color: $accent;
-				transition: visibility 0.3s ease 0s;
-			}
+
 			&:not(.active) {
 				@media (any-hover: hover) {
 					&:hover {
@@ -86,16 +76,10 @@
 					}
 				}
 			}
-			&.active {
-				&::before {
-					visibility: visible;
-				}
-			}
+
 			&:not(:last-child) {
 				margin-bottom: 0.37rem;
 			}
 		}
-	}
-	&__input {
 	}
 }
