@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" itemprop="description" content="описание страницы">
+	<meta name="keywords" itemprop="keywords" content="ключевые слова">
+	<!-- favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="theme-color" content="#ffffff">
+	<!-- favicon -->
+	<!-- Open Graph  -->
+	<meta property="og:type" content="business.business">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="627">
+	<meta property="og:site_name" content="">
+	<meta property="og:locale" content="en_EN">
+	<!-- Open Graph  -->
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:title" content="">
+	<meta property="twitter:description" content="">
+	<meta property="twitter:site" content="">
+	<meta property="twitter:url" content="">
+	<meta property="twitter:image:src" content="">
+	<!-- Twitter -->
+	<!-- plugnis -->
+	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240804151502">
+	<link rel="stylesheet" href="css/libs/fancybox.css?_v=20240804151502">
+	<!-- plugnis -->
+	<link rel="stylesheet" href="css/reset.min.css?_v=20240804151502">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240804151502">
+</head>
+
+<body>
+	<div class="canvas">
+		<canvas id="canvas"></canvas>
+	</div>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="/" class="header__logo">
+					<span class="header__logo-icon">
+						<picture>
+							<source srcset="img/butterfly.webp" type="image/webp"><img src="img/butterfly.png" alt="logo icon">
+						</picture>
+					</span> Smm3 </a>
+				<div class="header__select dropdown">
+					<button type="button" class="dropdown__button icon-chevron" aria-expanded="false" aria-haspopup="true"> ENG </button>
+					<div class="dropdown__content" aria-hidden="true">
+						<ul class="dropdown__list" role="listbox">
+							<li role="option" data-value="ENG" aria-checked="true" class="dropdown__list-item">ENG</li>
+							<li role="option" data-value="RUS" class="dropdown__list-item">RUS</li>
+						</ul>
+						<input type="text" name="lang" id="lang" class="dropdown__input hidden" hidden="" value="ENG">
+					</div>
+				</div>
+				<div class="header__menu menu">
+					<nav aria-label="menu" class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a href="/services.html" class="menu__link icon-category active"> Services </a>
+							</li>
+							<li class="menu__item">
+								<a href="" class="menu__link icon-connection"> API </a>
+							</li>
+						</ul>
+					</nav>
+					<div class="menu__actions">
+						<a href="" class="menu__action btn btn-secondary">Sign in</a>
+						<a href="/signup.html" class="menu__action btn btn-primary">Sign UP</a>
+					</div>
+				</div>
+				<button type="button" aria-label="Open mobile menu" class="menu__icon icon-menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+		</header>
+		<main class="page">
+			<section class="services">
+				<div class="services__container">
+					<form action="#" class="services__form">
+						<div class="services__form-selects">
+							<div class="services__select dropdown dropdown-sm">
+								<button type="button" class="dropdown__button icon-chevron" aria-expanded="false" aria-haspopup="true"> Instagram – Reels </button>
+								<div class="dropdown__content" aria-hidden="true">
+									<ul class="dropdown__list" role="listbox">
+										<li role="option" data-value="Instagram – Reels" aria-checked="true" class="dropdown__list-item">Instagram – Reels</li>
+										<li role="option" data-value="Instagram – Views" class="dropdown__list-item">Instagram – Views</li>
+									</ul>
+									<input type="text" name="lang" id="lang" class="dropdown__input hidden" hidden="" value="Instagram – Reels">
+								</div>
+							</div>
+							<div class="services__select dropdown dropdown-sm">
+								<button type="button" class="dropdown__button icon-chevron" aria-expanded="false" aria-haspopup="true"> RUB </button>
+								<div class="dropdown__content" aria-hidden="true">
+									<ul class="dropdown__list" role="listbox">
+										<li role="option" data-value="RUB" aria-checked="true" class="dropdown__list-item">RUB</li>
+										<li role="option" data-value="USD" class="dropdown__list-item">USD</li>
+									</ul>
+									<input type="text" name="lang" id="lang" class="dropdown__input hidden" hidden="" value="RUB">
+								</div>
+							</div>
+						</div>
+						<input type="text" name="search" autocomplete="off" class="form__input form__input-sm" placeholder="Search services...">
+					</form>
+					<h1 class="services__title title">
+						<span class="services__title-icon">
+							<img src="img/instargram.svg" alt="icon">
+						</span> Instagram – Reels
+					</h1>
+					<div class="services__table table">
+						<table>
+							<thead>
+								<tr>
+									<th>ID</th>
+									<th>Service</th>
+									<th>Rate per 1000</th>
+									<th>Min order – Max order</th>
+									<th>Details</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td data-label="id"> 45663 </td>
+									<td>
+										<div class="table__name icon-instragram"> Instagram - Reel Views | Start 0 - 1 Hour | Speed: ~500,000 Per Day </div>
+										<div class="table__time icon-clock">6 minutes</div>
+									</td>
+									<td data-label="Rate per 1000">
+										<div class="table__price"> 19.25 ₽ </div>
+									</td>
+									<td data-label="Min order – Max order">
+										<div class="table__values">
+											<div class="table__values-min">100</div> - <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+										</div>
+									</td>
+									<td>
+										<a href="#details" data-fancybox="" class="btn btn-primary">Description</a>
+									</td>
+								</tr>
+								<tr>
+									<td data-label="id"> 45663 </td>
+									<td>
+										<div class="table__name icon-instragram"> Instagram - Reel Views + Impressions + Reach + Profile Visits | Medium quality | Stable </div>
+										<div class="table__time icon-clock">6 minutes</div>
+									</td>
+									<td data-label="Rate per 1000">
+										<div class="table__price"> 19.25 ₽ </div>
+									</td>
+									<td data-label="Min order – Max order">
+										<div class="table__values">
+											<div class="table__values-min">100</div> - <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+										</div>
+									</td>
+									<td>
+										<a href="#details" data-fancybox="" class="btn btn-primary">Description</a>
+									</td>
+								</tr>
+								<tr>
+									<td data-label="id"> 45663 </td>
+									<td>
+										<div class="table__name icon-instragram"> Instagram - Reel Views | Start 0 - 1 Hour | Speed: ~500,000 Per Day </div>
+										<div class="table__time icon-clock">6 minutes</div>
+									</td>
+									<td data-label="Rate per 1000">
+										<div class="table__price"> 19.25 ₽ </div>
+									</td>
+									<td data-label="Min order – Max order">
+										<div class="table__values">
+											<div class="table__values-min">100</div> - <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+										</div>
+									</td>
+									<td>
+										<a href="#details" data-fancybox="" class="btn btn-primary">Description</a>
+									</td>
+								</tr>
+								<tr>
+									<td data-label="id"> 45663 </td>
+									<td>
+										<div class="table__name icon-instragram"> Instagram - Reel Views + Impressions + Reach + Profile Visits | Medium quality | Stable </div>
+										<div class="table__time icon-clock">6 minutes</div>
+									</td>
+									<td data-label="Rate per 1000">
+										<div class="table__price"> 19.25 ₽ </div>
+									</td>
+									<td data-label="Min order – Max order">
+										<div class="table__values">
+											<div class="table__values-min">100</div> - <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+										</div>
+									</td>
+									<td>
+										<a href="#details" data-fancybox="" class="btn btn-primary">Description</a>
+									</td>
+								</tr>
+								<tr>
+									<td data-label="id"> 45663 </td>
+									<td>
+										<div class="table__name icon-instragram"> Instagram - Reel Views | Start 0 - 1 Hour | Speed: ~500,000 Per Day </div>
+										<div class="table__time icon-clock">6 minutes</div>
+									</td>
+									<td data-label="Rate per 1000">
+										<div class="table__price"> 19.25 ₽ </div>
+									</td>
+									<td data-label="Min order – Max order">
+										<div class="table__values">
+											<div class="table__values-min">100</div> - <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+										</div>
+									</td>
+									<td>
+										<a href="#details" data-fancybox="" class="btn btn-primary">Description</a>
+									</td>
+								</tr>
+								<tr>
+									<td data-label="id"> 45663 </td>
+									<td>
+										<div class="table__name icon-instragram"> Instagram - Reel Views + Impressions + Reach + Profile Visits | Medium quality | Stable </div>
+										<div class="table__time icon-clock">6 minutes</div>
+									</td>
+									<td data-label="Rate per 1000">
+										<div class="table__price"> 19.25 ₽ </div>
+									</td>
+									<td data-label="Min order – Max order">
+										<div class="table__values">
+											<div class="table__values-min">100</div> - <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+										</div>
+									</td>
+									<td>
+										<a href="#details" data-fancybox="" class="btn btn-primary">Description</a>
+									</td>
+								</tr>
+								<tr>
+									<td data-label="id"> 45663 </td>
+									<td>
+										<div class="table__name icon-instragram"> Instagram - Reel Views | Start 0 - 1 Hour | Speed: ~500,000 Per Day </div>
+										<div class="table__time icon-clock">6 minutes</div>
+									</td>
+									<td data-label="Rate per 1000">
+										<div class="table__price"> 19.25 ₽ </div>
+									</td>
+									<td data-label="Min order – Max order">
+										<div class="table__values">
+											<div class="table__values-min">100</div> - <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+										</div>
+									</td>
+									<td>
+										<a href="#details" data-fancybox="" class="btn btn-primary">Description</a>
+									</td>
+								</tr>
+								<tr>
+									<td data-label="id"> 45663 </td>
+									<td>
+										<div class="table__name icon-instragram"> Instagram - Reel Views + Impressions + Reach + Profile Visits | Medium quality | Stable </div>
+										<div class="table__time icon-clock">6 minutes</div>
+									</td>
+									<td data-label="Rate per 1000">
+										<div class="table__price"> 19.25 ₽ </div>
+									</td>
+									<td data-label="Min order – Max order">
+										<div class="table__values">
+											<div class="table__values-min">100</div> - <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+										</div>
+									</td>
+									<td>
+										<a href="#details" data-fancybox="" class="btn btn-primary">Description</a>
+									</td>
+								</tr>
+								<tr>
+									<td data-label="id"> 45663 </td>
+									<td>
+										<div class="table__name icon-instragram"> Instagram - Reel Views | Start 0 - 1 Hour | Speed: ~500,000 Per Day </div>
+										<div class="table__time icon-clock">6 minutes</div>
+									</td>
+									<td data-label="Rate per 1000">
+										<div class="table__price"> 19.25 ₽ </div>
+									</td>
+									<td data-label="Min order – Max order">
+										<div class="table__values">
+											<div class="table__values-min">100</div> - <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+										</div>
+									</td>
+									<td>
+										<a href="#details" data-fancybox="" class="btn btn-primary">Description</a>
+									</td>
+								</tr>
+								<tr>
+									<td data-label="id"> 45663 </td>
+									<td>
+										<div class="table__name icon-instragram"> Instagram - Reel Views + Impressions + Reach + Profile Visits | Medium quality | Stable </div>
+										<div class="table__time icon-clock">6 minutes</div>
+									</td>
+									<td data-label="Rate per 1000">
+										<div class="table__price"> 19.25 ₽ </div>
+									</td>
+									<td data-label="Min order – Max order">
+										<div class="table__values">
+											<div class="table__values-min">100</div> - <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+										</div>
+									</td>
+									<td>
+										<a href="#details" data-fancybox="" class="btn btn-primary">Description</a>
+									</td>
+								</tr>
+								<tr>
+									<td data-label="id"> 45663 </td>
+									<td>
+										<div class="table__name icon-instragram"> Instagram - Reel Views | Start 0 - 1 Hour | Speed: ~500,000 Per Day </div>
+										<div class="table__time icon-clock">6 minutes</div>
+									</td>
+									<td data-label="Rate per 1000">
+										<div class="table__price"> 19.25 ₽ </div>
+									</td>
+									<td data-label="Min order – Max order">
+										<div class="table__values">
+											<div class="table__values-min">100</div> - <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+										</div>
+									</td>
+									<td>
+										<a href="#details" data-fancybox="" class="btn btn-primary">Description</a>
+									</td>
+								</tr>
+								<tr>
+									<td data-label="id"> 45663 </td>
+									<td>
+										<div class="table__name icon-instragram"> Instagram - Reel Views + Impressions + Reach + Profile Visits | Medium quality | Stable </div>
+										<div class="table__time icon-clock">6 minutes</div>
+									</td>
+									<td data-label="Rate per 1000">
+										<div class="table__price"> 19.25 ₽ </div>
+									</td>
+									<td data-label="Min order – Max order">
+										<div class="table__values">
+											<div class="table__values-min">100</div> - <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+										</div>
+									</td>
+									<td>
+										<a href="#details" data-fancybox="" class="btn btn-primary">Description</a>
+									</td>
+								</tr>
+								<tr>
+									<td data-label="id"> 45663 </td>
+									<td>
+										<div class="table__name icon-instragram"> Instagram - Reel Views | Start 0 - 1 Hour | Speed: ~500,000 Per Day </div>
+										<div class="table__time icon-clock">6 minutes</div>
+									</td>
+									<td data-label="Rate per 1000">
+										<div class="table__price"> 19.25 ₽ </div>
+									</td>
+									<td data-label="Min order – Max order">
+										<div class="table__values">
+											<div class="table__values-min">100</div> - <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+										</div>
+									</td>
+									<td>
+										<a href="#details" data-fancybox="" class="btn btn-primary">Description</a>
+									</td>
+								</tr>
+								<tr>
+									<td data-label="id"> 45663 </td>
+									<td>
+										<div class="table__name icon-instragram"> Instagram - Reel Views + Impressions + Reach + Profile Visits | Medium quality | Stable </div>
+										<div class="table__time icon-clock">6 minutes</div>
+									</td>
+									<td data-label="Rate per 1000">
+										<div class="table__price"> 19.25 ₽ </div>
+									</td>
+									<td data-label="Min order – Max order">
+										<div class="table__values">
+											<div class="table__values-min">100</div> - <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+										</div>
+									</td>
+									<td>
+										<a href="#details" data-fancybox="" class="btn btn-primary">Description</a>
+									</td>
+								</tr>
+								<tr>
+									<td data-label="id"> 45663 </td>
+									<td>
+										<div class="table__name icon-instragram"> Instagram - Reel Views | Start 0 - 1 Hour | Speed: ~500,000 Per Day </div>
+										<div class="table__time icon-clock">6 minutes</div>
+									</td>
+									<td data-label="Rate per 1000">
+										<div class="table__price"> 19.25 ₽ </div>
+									</td>
+									<td data-label="Min order – Max order">
+										<div class="table__values">
+											<div class="table__values-min">100</div> - <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+										</div>
+									</td>
+									<td>
+										<a href="#details" data-fancybox="" class="btn btn-primary">Description</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container"> smm3.ru © 2024 All Rights Reserved. </div>
+		</footer>
+	</div>
+	<div id="details" class="popup">
+		<button type="button" data-fancybox-close="" aria-label="close modal" class="popup__close icon-close"></button>
+		<div class="popup__header">
+			<div class="popup__header-num">5382</div>
+			<div class="popup__header-name">Instagram - Reel Views | Start 0 - 1 Hour | Speed: ~500,000 Per Day</div>
+		</div>
+		<div class="popup__content">
+			<div class="popup__desc"> Quality: Real <br> Speed: 20-50K/D <br> Refill: 365 Days Refill <br> Link: Username <br> <br> Start Time: Instant <br> 📍 provider : our platforms <br> 📌 This is our exclusive service, if the service encounters a problem, just inform the support so that the problem can be solved completely <br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br> ~recommended~<wbr>bestseller~<wbr>updated~<wbr>instant~<wbr>fast~<wbr>favorite <br> <br> <br> Quality: Real <br> Speed: 20-50K/D <br> Refill: 365 Days Refill <br> Link: Username <br> <br> Start Time: Instant <br> 📍 provider : our platforms <br> 📌 This is our exclusive service, if the service encounters a problem, just inform the support so that the problem can be solved completely <br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br> ~recommended~<wbr>bestseller~<wbr>updated~<wbr>instant~<wbr>fast~<wbr>favorite <br> <br> <br> Quality: Real <br> Speed: 20-50K/D <br> Refill: 365 Days Refill <br> Link: Username <br> <br> Start Time: Instant <br> 📍 provider : our platforms <br> 📌 This is our exclusive service, if the service encounters a problem, just inform the support so that the problem can be solved completely <br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br> ~recommended~<wbr>bestseller~<wbr>updated~<wbr>instant~<wbr>fast~<wbr>favorite
+			</div>
+		</div>
+		<a href="" class="popup__btn btn btn-primary btn-lg">Create order</a>
+	</div> <!-- plugnis -->
+	<script src="js/libs/swiper-bundle.min.js?_v=20240804151502"></script>
+	<script src="js/libs/fancybox.umd.js?_v=20240804151502"></script>
+	<!-- <script src="js/libs/webgl.js?_v=20240804151502"></script> -->
+	<!-- plugnis -->
+	<script src="js/app.min.js?_v=20240804151502"></script>
+</body>
+
+</html>

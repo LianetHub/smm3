@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('html/_head.html', {
+    'title': ''
+    })
+    <body>
+        <div class="canvas">
+            <canvas id="canvas"></canvas>
+        </div>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "active": 1
+            })
+            <main class="page">
+                <section class="services">
+                    <div class="services__container">
+                        <form action="#" class="services__form">
+                            <div class="services__form-selects">
+
+                                <div class="services__select dropdown dropdown-sm">
+                                    <button type="button" class="dropdown__button icon-chevron" aria-expanded="false" aria-haspopup="true">
+                                        Instagram – Reels
+                                    </button>
+                                    <div class="dropdown__content" aria-hidden="true">
+                                        <ul class="dropdown__list" role="listbox">
+                                            <li role="option" data-value="Instagram – Reels" aria-checked="true" class="dropdown__list-item">Instagram – Reels</li>
+                                            <li role="option" data-value="Instagram – Views" class="dropdown__list-item">Instagram – Views</li>
+                                        </ul>
+                                        <input type="text" name="lang" id="lang" class="dropdown__input hidden" hidden value="Instagram – Reels">
+                                    </div>
+                                </div>
+                                <div class="services__select dropdown dropdown-sm">
+                                    <button type="button" class="dropdown__button icon-chevron" aria-expanded="false" aria-haspopup="true">
+                                        RUB
+                                    </button>
+                                    <div class="dropdown__content" aria-hidden="true">
+                                        <ul class="dropdown__list" role="listbox">
+                                            <li role="option" data-value="RUB" aria-checked="true" class="dropdown__list-item">RUB</li>
+                                            <li role="option" data-value="USD" class="dropdown__list-item">USD</li>
+                                        </ul>
+                                        <input type="text" name="lang" id="lang" class="dropdown__input hidden" hidden value="RUB">
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="text" name="search" autocomplete="off" class="form__input form__input-sm" placeholder="Search services...">
+                        </form>
+                        <h1 class="services__title title">
+                            <span class="services__title-icon">
+                                <img src="@img/instargram.svg" alt="icon">
+                            </span>
+                            Instagram – Reels
+                        </h1>
+                        <div class="services__table table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Service</th>
+                                        <th>Rate per 1000</th>
+                                        <th>Min order – Max order</th>
+                                        <th>Details</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-label="id">
+                                            45663
+                                        </td>
+                                        <td>
+                                            <div class="table__name icon-instragram">
+                                                Instagram - Reel Views | Start 0 - 1 Hour | Speed: ~500,000 Per Day
+                                            </div>
+                                            <div class="table__time icon-clock">6 minutes</div>
+                                        </td>
+                                        <td data-label="Rate per 1000">
+                                            <div class="table__price">
+                                                19.25 ₽
+                                            </div>
+                                        </td>
+                                        <td data-label="Min order – Max order">
+                                            <div class="table__values">
+                                                <div class="table__values-min">100</div>
+                                                -
+                                                <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="#details" data-fancybox class="btn btn-primary">Description</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="id">
+                                            45663
+                                        </td>
+                                        <td>
+                                            <div class="table__name icon-instragram">
+                                                Instagram - Reel Views + Impressions + Reach + Profile Visits | Medium quality | Stable
+                                            </div>
+                                            <div class="table__time icon-clock">6 minutes</div>
+                                        </td>
+                                        <td data-label="Rate per 1000">
+                                            <div class="table__price">
+                                                19.25 ₽
+                                            </div>
+                                        </td>
+                                        <td data-label="Min order – Max order">
+                                            <div class="table__values">
+                                                <div class="table__values-min">100</div>
+                                                -
+                                                <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="#details" data-fancybox class="btn btn-primary">Description</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="id">
+                                            45663
+                                        </td>
+                                        <td>
+                                            <div class="table__name icon-instragram">
+                                                Instagram - Reel Views | Start 0 - 1 Hour | Speed: ~500,000 Per Day
+                                            </div>
+                                            <div class="table__time icon-clock">6 minutes</div>
+                                        </td>
+                                        <td data-label="Rate per 1000">
+                                            <div class="table__price">
+                                                19.25 ₽
+                                            </div>
+                                        </td>
+                                        <td data-label="Min order – Max order">
+                                            <div class="table__values">
+                                                <div class="table__values-min">100</div>
+                                                -
+                                                <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="#details" data-fancybox class="btn btn-primary">Description</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="id">
+                                            45663
+                                        </td>
+                                        <td>
+                                            <div class="table__name icon-instragram">
+                                                Instagram - Reel Views + Impressions + Reach + Profile Visits | Medium quality | Stable
+                                            </div>
+                                            <div class="table__time icon-clock">6 minutes</div>
+                                        </td>
+                                        <td data-label="Rate per 1000">
+                                            <div class="table__price">
+                                                19.25 ₽
+                                            </div>
+                                        </td>
+                                        <td data-label="Min order – Max order">
+                                            <div class="table__values">
+                                                <div class="table__values-min">100</div>
+                                                -
+                                                <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="#details" data-fancybox class="btn btn-primary">Description</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="id">
+                                            45663
+                                        </td>
+                                        <td>
+                                            <div class="table__name icon-instragram">
+                                                Instagram - Reel Views | Start 0 - 1 Hour | Speed: ~500,000 Per Day
+                                            </div>
+                                            <div class="table__time icon-clock">6 minutes</div>
+                                        </td>
+                                        <td data-label="Rate per 1000">
+                                            <div class="table__price">
+                                                19.25 ₽
+                                            </div>
+                                        </td>
+                                        <td data-label="Min order – Max order">
+                                            <div class="table__values">
+                                                <div class="table__values-min">100</div>
+                                                -
+                                                <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="#details" data-fancybox class="btn btn-primary">Description</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="id">
+                                            45663
+                                        </td>
+                                        <td>
+                                            <div class="table__name icon-instragram">
+                                                Instagram - Reel Views + Impressions + Reach + Profile Visits | Medium quality | Stable
+                                            </div>
+                                            <div class="table__time icon-clock">6 minutes</div>
+                                        </td>
+                                        <td data-label="Rate per 1000">
+                                            <div class="table__price">
+                                                19.25 ₽
+                                            </div>
+                                        </td>
+                                        <td data-label="Min order – Max order">
+                                            <div class="table__values">
+                                                <div class="table__values-min">100</div>
+                                                -
+                                                <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="#details" data-fancybox class="btn btn-primary">Description</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="id">
+                                            45663
+                                        </td>
+                                        <td>
+                                            <div class="table__name icon-instragram">
+                                                Instagram - Reel Views | Start 0 - 1 Hour | Speed: ~500,000 Per Day
+                                            </div>
+                                            <div class="table__time icon-clock">6 minutes</div>
+                                        </td>
+                                        <td data-label="Rate per 1000">
+                                            <div class="table__price">
+                                                19.25 ₽
+                                            </div>
+                                        </td>
+                                        <td data-label="Min order – Max order">
+                                            <div class="table__values">
+                                                <div class="table__values-min">100</div>
+                                                -
+                                                <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="#details" data-fancybox class="btn btn-primary">Description</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="id">
+                                            45663
+                                        </td>
+                                        <td>
+                                            <div class="table__name icon-instragram">
+                                                Instagram - Reel Views + Impressions + Reach + Profile Visits | Medium quality | Stable
+                                            </div>
+                                            <div class="table__time icon-clock">6 minutes</div>
+                                        </td>
+                                        <td data-label="Rate per 1000">
+                                            <div class="table__price">
+                                                19.25 ₽
+                                            </div>
+                                        </td>
+                                        <td data-label="Min order – Max order">
+                                            <div class="table__values">
+                                                <div class="table__values-min">100</div>
+                                                -
+                                                <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="#details" data-fancybox class="btn btn-primary">Description</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="id">
+                                            45663
+                                        </td>
+                                        <td>
+                                            <div class="table__name icon-instragram">
+                                                Instagram - Reel Views | Start 0 - 1 Hour | Speed: ~500,000 Per Day
+                                            </div>
+                                            <div class="table__time icon-clock">6 minutes</div>
+                                        </td>
+                                        <td data-label="Rate per 1000">
+                                            <div class="table__price">
+                                                19.25 ₽
+                                            </div>
+                                        </td>
+                                        <td data-label="Min order – Max order">
+                                            <div class="table__values">
+                                                <div class="table__values-min">100</div>
+                                                -
+                                                <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="#details" data-fancybox class="btn btn-primary">Description</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="id">
+                                            45663
+                                        </td>
+                                        <td>
+                                            <div class="table__name icon-instragram">
+                                                Instagram - Reel Views + Impressions + Reach + Profile Visits | Medium quality | Stable
+                                            </div>
+                                            <div class="table__time icon-clock">6 minutes</div>
+                                        </td>
+                                        <td data-label="Rate per 1000">
+                                            <div class="table__price">
+                                                19.25 ₽
+                                            </div>
+                                        </td>
+                                        <td data-label="Min order – Max order">
+                                            <div class="table__values">
+                                                <div class="table__values-min">100</div>
+                                                -
+                                                <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="#details" data-fancybox class="btn btn-primary">Description</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="id">
+                                            45663
+                                        </td>
+                                        <td>
+                                            <div class="table__name icon-instragram">
+                                                Instagram - Reel Views | Start 0 - 1 Hour | Speed: ~500,000 Per Day
+                                            </div>
+                                            <div class="table__time icon-clock">6 minutes</div>
+                                        </td>
+                                        <td data-label="Rate per 1000">
+                                            <div class="table__price">
+                                                19.25 ₽
+                                            </div>
+                                        </td>
+                                        <td data-label="Min order – Max order">
+                                            <div class="table__values">
+                                                <div class="table__values-min">100</div>
+                                                -
+                                                <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="#details" data-fancybox class="btn btn-primary">Description</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="id">
+                                            45663
+                                        </td>
+                                        <td>
+                                            <div class="table__name icon-instragram">
+                                                Instagram - Reel Views + Impressions + Reach + Profile Visits | Medium quality | Stable
+                                            </div>
+                                            <div class="table__time icon-clock">6 minutes</div>
+                                        </td>
+                                        <td data-label="Rate per 1000">
+                                            <div class="table__price">
+                                                19.25 ₽
+                                            </div>
+                                        </td>
+                                        <td data-label="Min order – Max order">
+                                            <div class="table__values">
+                                                <div class="table__values-min">100</div>
+                                                -
+                                                <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="#details" data-fancybox class="btn btn-primary">Description</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="id">
+                                            45663
+                                        </td>
+                                        <td>
+                                            <div class="table__name icon-instragram">
+                                                Instagram - Reel Views | Start 0 - 1 Hour | Speed: ~500,000 Per Day
+                                            </div>
+                                            <div class="table__time icon-clock">6 minutes</div>
+                                        </td>
+                                        <td data-label="Rate per 1000">
+                                            <div class="table__price">
+                                                19.25 ₽
+                                            </div>
+                                        </td>
+                                        <td data-label="Min order – Max order">
+                                            <div class="table__values">
+                                                <div class="table__values-min">100</div>
+                                                -
+                                                <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="#details" data-fancybox class="btn btn-primary">Description</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="id">
+                                            45663
+                                        </td>
+                                        <td>
+                                            <div class="table__name icon-instragram">
+                                                Instagram - Reel Views + Impressions + Reach + Profile Visits | Medium quality | Stable
+                                            </div>
+                                            <div class="table__time icon-clock">6 minutes</div>
+                                        </td>
+                                        <td data-label="Rate per 1000">
+                                            <div class="table__price">
+                                                19.25 ₽
+                                            </div>
+                                        </td>
+                                        <td data-label="Min order – Max order">
+                                            <div class="table__values">
+                                                <div class="table__values-min">100</div>
+                                                -
+                                                <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="#details" data-fancybox class="btn btn-primary">Description</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="id">
+                                            45663
+                                        </td>
+                                        <td>
+                                            <div class="table__name icon-instragram">
+                                                Instagram - Reel Views | Start 0 - 1 Hour | Speed: ~500,000 Per Day
+                                            </div>
+                                            <div class="table__time icon-clock">6 minutes</div>
+                                        </td>
+                                        <td data-label="Rate per 1000">
+                                            <div class="table__price">
+                                                19.25 ₽
+                                            </div>
+                                        </td>
+                                        <td data-label="Min order – Max order">
+                                            <div class="table__values">
+                                                <div class="table__values-min">100</div>
+                                                -
+                                                <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="#details" data-fancybox class="btn btn-primary">Description</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+        @@include('html/_modal.html', {})
+        @@include('html/_js.html', {})
+    </body>
+</html>

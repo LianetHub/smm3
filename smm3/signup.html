@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" itemprop="description" content="описание страницы">
+	<meta name="keywords" itemprop="keywords" content="ключевые слова">
+	<!-- favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="theme-color" content="#ffffff">
+	<!-- favicon -->
+	<!-- Open Graph  -->
+	<meta property="og:type" content="business.business">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="627">
+	<meta property="og:site_name" content="">
+	<meta property="og:locale" content="en_EN">
+	<!-- Open Graph  -->
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:title" content="">
+	<meta property="twitter:description" content="">
+	<meta property="twitter:site" content="">
+	<meta property="twitter:url" content="">
+	<meta property="twitter:image:src" content="">
+	<!-- Twitter -->
+	<!-- plugnis -->
+	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240804151502">
+	<link rel="stylesheet" href="css/libs/fancybox.css?_v=20240804151502">
+	<!-- plugnis -->
+	<link rel="stylesheet" href="css/reset.min.css?_v=20240804151502">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240804151502">
+</head>
+
+<body>
+	<div class="canvas">
+		<canvas id="canvas"></canvas>
+	</div>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="/" class="header__logo">
+					<span class="header__logo-icon">
+						<picture>
+							<source srcset="img/butterfly.webp" type="image/webp"><img src="img/butterfly.png" alt="logo icon">
+						</picture>
+					</span> Smm3 </a>
+				<div class="header__select dropdown">
+					<button type="button" class="dropdown__button icon-chevron" aria-expanded="false" aria-haspopup="true"> ENG </button>
+					<div class="dropdown__content" aria-hidden="true">
+						<ul class="dropdown__list" role="listbox">
+							<li role="option" data-value="ENG" aria-checked="true" class="dropdown__list-item">ENG</li>
+							<li role="option" data-value="RUS" class="dropdown__list-item">RUS</li>
+						</ul>
+						<input type="text" name="lang" id="lang" class="dropdown__input hidden" hidden="" value="ENG">
+					</div>
+				</div>
+				<div class="header__menu menu">
+					<nav aria-label="menu" class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a href="/services.html" class="menu__link icon-category"> Services </a>
+							</li>
+							<li class="menu__item">
+								<a href="" class="menu__link icon-connection"> API </a>
+							</li>
+						</ul>
+					</nav>
+					<div class="menu__actions">
+						<a href="" class="menu__action btn btn-secondary">Sign in</a>
+						<a href="/signup.html" class="menu__action btn btn-primary">Sign UP</a>
+					</div>
+				</div>
+				<button type="button" aria-label="Open mobile menu" class="menu__icon icon-menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+		</header>
+		<main class="page">
+			<section class="login">
+				<div class="login__container">
+					<div class="login__body">
+						<h1 class="login__title title"> Sign up </h1>
+						<p class="login__subtitle"> Your information is not shared with third parties. </p>
+						<form action="#" class="login__form form">
+							<input type="text" name="login" autocomplete="username" class="form__input" placeholder="Login">
+							<input type="email" name="email" autocomplete="email" class="form__input" placeholder="Email">
+							<input type="password" name="psw" autocomplete="current-password" class="form__input" placeholder="Password">
+							<input type="password" name="confirm-psw" autocomplete="current-password" class="form__input" placeholder="Confirm password">
+							<div class="form__column">
+								<button type="submit" class="form__btn btn btn-primary btn-lg icon-butterfly">Sign in</button>
+								<div class="form__sign"> No account? <a href="login.html" class="form__sign-link">Sign Up</a>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container"> smm3.ru © 2024 All Rights Reserved. </div>
+		</footer>
+	</div> <!-- plugnis -->
+	<script src="js/libs/swiper-bundle.min.js?_v=20240804151502"></script>
+	<script src="js/libs/fancybox.umd.js?_v=20240804151502"></script>
+	<!-- <script src="js/libs/webgl.js?_v=20240804151502"></script> -->
+	<!-- plugnis -->
+	<script src="js/app.min.js?_v=20240804151502"></script>
+</body>
+
+</html>

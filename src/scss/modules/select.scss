@@ -6,6 +6,20 @@
 			visibility: visible;
 		}
 	}
+
+	&.dropdown-sm {
+		.dropdown__button {
+			border-radius: 0.3125rem;
+			font-size: 0.75rem;
+			&::after {
+				border-radius: 0.3125rem;
+			}
+		}
+		.dropdown__list {
+			font-size: 0.75rem;
+		}
+	}
+	// .dropdown__button
 	&__button {
 		position: relative;
 		cursor: pointer;
@@ -16,13 +30,27 @@
 		@media (min-width: $md4) {
 			padding: 0.45rem 0.88rem;
 		}
+		width: 100%;
+		min-height: 100%;
+		justify-content: space-between;
+		white-space: nowrap;
 		font-size: 0.875rem;
 		border-radius: 0.5rem;
 		font-weight: 600;
 		gap: 0.19rem;
 		display: flex;
 		align-items: center;
-		text-transform: uppercase;
+		&::after {
+			content: "";
+			position: absolute;
+			inset: rem(-1.5);
+			background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 100%), #5068ee;
+			z-index: -1;
+			border-radius: 0.5rem;
+			opacity: 0;
+			transition: opacity 0.3s ease 0s;
+		}
+		transition: all 0.3s ease 0s;
 		&.selected {
 			color: #232c32;
 		}
@@ -34,15 +62,23 @@
 		}
 		&:not(.active) {
 			&:hover {
-				border-color: #039;
+				border-color: transparent;
+				&::after {
+					opacity: 1;
+				}
 			}
 		}
 		&.active {
+			border-color: transparent;
+			&::after {
+				opacity: 1;
+			}
 			&::before {
 				transform: rotate(-180deg);
 			}
 		}
 	}
+	// .dropdown__list
 	&__list {
 		position: absolute;
 		left: 0;
@@ -53,8 +89,7 @@
 		font-size: 0.875rem;
 		font-weight: 600;
 		border-radius: 0.25rem;
-		border: rem(1) solid rgba(255, 255, 255, 0.34);
-		background: #000;
+		background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 100%), #5068ee;
 		transition: all 0.2s ease 0s;
 		opacity: 0;
 		visibility: hidden;
@@ -63,23 +98,27 @@
 			opacity: 1;
 			visibility: visible;
 		}
-		&-item {
-			cursor: pointer;
-			display: flex;
-			align-items: center;
-			gap: 0.31rem;
-
-			&:not(.active) {
-				@media (any-hover: hover) {
-					&:hover {
-						color: $accent;
-					}
+	}
+	// .dropdown__list-item
+	&__list-item {
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		gap: 0.31rem;
+		transition: color 0.3s ease 0s;
+		&[aria-checked="true"] {
+			color: $green;
+		}
+		&:not([aria-checked="true"]) {
+			@media (any-hover: hover) {
+				&:hover {
+					color: $green;
 				}
 			}
+		}
 
-			&:not(:last-child) {
-				margin-bottom: 0.37rem;
-			}
+		&:not(:last-child) {
+			margin-bottom: 0.37rem;
 		}
 	}
 }

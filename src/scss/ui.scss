@@ -327,13 +327,12 @@ $scrollbarHover: darken(
 
 ::-webkit-scrollbar {
 	width: rem(8);
-	display: none;
 }
 ::-webkit-scrollbar-track {
-	background: #000;
+	background: #141113;
 }
 ::-webkit-scrollbar-thumb {
-	background: $scrollbarColor;
+	background: #352c33;
 	border-radius: rem(8);
 	@media (any-hover: hover) {
 		&:hover {

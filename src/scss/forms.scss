@@ -28,6 +28,10 @@
 		&._error {
 			outline: 1px solid #ba2028;
 		}
+		&.form__input-sm {
+			padding: 0.5rem 1rem;
+			font-size: 0.75rem;
+		}
 	}
 
 	// .form__checkbox

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('html/_head.html', {
+    'title': ''
+    })
+    <body>
+        <div class="canvas">
+            <canvas id="canvas"></canvas>
+        </div>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "active":0
+            })
+            <main class="page">
+                <section class="login">
+                    <div class="login__container">
+                        <div class="login__body">
+                            <h1 class="login__title title">
+                                Sign up
+                            </h1>
+                            <p class="login__subtitle">
+                                Your information is not shared with third parties.
+                            </p>
+                            <form action="#" class="login__form form">
+                                <input type="text" name="login" autocomplete="username" class="form__input" placeholder="Login">
+                                <input type="email" name="email" autocomplete="email" class="form__input" placeholder="Email">
+                                <input type="password" name="psw" autocomplete="current-password" class="form__input" placeholder="Password">
+                                <input type="password" name="confirm-psw" autocomplete="current-password" class="form__input" placeholder="Confirm password">
+                                <div class="form__column">
+                                    <button type="submit" class="form__btn btn btn-primary btn-lg icon-butterfly">Sign in</button>
+                                    <div class="form__sign">
+                                        No account? <a href="login.html" class="form__sign-link">Sign Up</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+
+        @@include('html/_js.html', {})
+    </body>
+</html>

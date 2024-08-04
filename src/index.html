@@ -8,7 +8,9 @@
             <canvas id="canvas"></canvas>
         </div>
         <div class="wrapper">
-            @@include('html/_header.html', {})
+            @@include('html/_header.html', {
+            "active":0
+            })
             <main class="page">
                 <section class="main">
                     <div class="main__container">
@@ -340,7 +342,7 @@
             </main>
             @@include('html/_footer.html', {})
         </div>
-        @@include('html/_modal.html', {})
+
         @@include('html/_js.html', {})
     </body>
 </html>
