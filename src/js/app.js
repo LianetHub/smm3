@@ -24,18 +24,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const target = e.target;
 
+        // menu btn
         if (target.closest('.icon-menu') || (target.classList.contains('menu__link') && document.querySelector('.header').classList.contains('open-menu'))) {
             getMenu()
         }
 
+        // fac accordion
         if (target.matches('.faq__item-question')) {
             target.parentNode.classList.toggle('active')
             target.style = "pointer-events: none;"
             target.nextElementSibling.slideToggle(300, () => {
                 target.removeAttribute("style");
             });
-
         }
+
+        // copy btn
+
+        if (target.matches('.btn-copy')) {
+            var textToCopy = target.previousElementSibling.textContent;
+
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(textToCopy).then(function () {
+                    showTooltip(target);
+                }).catch(function (err) {
+                    console.error('Ошибка при копировании: ', err);
+                });
+            } else {
+                var textArea = document.createElement("textarea");
+                textArea.value = textToCopy;
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    showTooltip(target);
+                } catch (err) {
+                    console.error('Ошибка при копировании: ', err);
+                }
+                document.body.removeChild(textArea);
+            }
+        }
+
 
     });
 
@@ -43,6 +72,22 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.toggle('lock');
         document.querySelector('.header').classList.toggle('open-menu');
     }
+
+    function showTooltip(element) {
+        var tooltip = document.createElement('span');
+        tooltip.className = 'tooltip';
+        tooltip.textContent = 'Copied';
+
+        element.innerHTML += tooltip.outerHTML;
+
+        setTimeout(function () {
+            var tooltips = element.querySelectorAll('.tooltip');
+            tooltips.forEach(function (tooltip) {
+                tooltip.remove();
+            });
+        }, 1000);
+    }
+
 
 
     // custom select

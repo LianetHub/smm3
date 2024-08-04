@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('html/_head.html', {
+    'title': ''
+    })
+    <body>
+        <div class="canvas">
+            <canvas id="canvas"></canvas>
+        </div>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "active": 2
+            })
+            <main class="page">
+                <div class="api">
+                    <div class="api__container">
+                        <div class="api__body">
+                            <div class="api__section">
+                                <h2 class="api__title color-green">API Docs</h2>
+                                <ul class="api__list">
+                                    <li class="api__item">
+                                        <div class="api__caption">POST</div>
+                                        <div class="api__field">
+                                            <div class="api__field-value">HTTP Method</div>
+                                            <button type="button" aria-label="copy" class="api__field-copy btn-copy icon-copy"></button>
+                                        </div>
+                                    </li>
+                                    <li class="api__item">
+                                        <div class="api__caption">API URL</div>
+                                        <div class="api__field">
+                                            <div class="api__field-value">https://smm3.ru/api/v2</div>
+                                            <button type="button" aria-label="copy" class="api__field-copy btn-copy icon-copy"></button>
+                                        </div>
+                                    </li>
+                                    <li class="api__item">
+                                        <div class="api__caption">Response format</div>
+                                        <div class="api__field">
+                                            <div class="api__field-value">JSON</div>
+                                            <button type="button" aria-label="copy" class="api__field-copy btn-copy icon-copy"></button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="api__section">
+                                <h2 class="api__title color-green">Service list</h2>
+                                <div class="api__table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Parameters</th>
+                                                <th>Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>key</td>
+                                                <td>Your API key</td>
+                                            </tr>
+                                            <tr>
+                                                <td>action</td>
+                                                <td>services</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <h3 class="api__title color-accent">Example response</h3>
+                                <div class="api__code">
+                                    <code>
+                                        <pre>@@include('./html/codes/_text.txt')</pre>
+                                    </code>
+                                    <button type="button" aria-label="copy" class="api__code-copy btn-copy icon-copy"></button>
+                                </div>
+                            </div>
+                            <div class="api__section">
+                                <h2 class="api__title color-green">Add order</h2>
+                                <div class="api__dropdown dropdown">
+                                    <button type="button" class="dropdown__button icon-chevron" aria-expanded="false" aria-haspopup="true">
+                                        Default
+                                    </button>
+                                    <div class="dropdown__content" aria-hidden="true">
+                                        <ul class="dropdown__list" role="listbox">
+                                            <li role="option" data-value="Default" aria-checked="true" class="dropdown__list-item">Default</li>
+                                            <li role="option" data-value="Not Default" class="dropdown__list-item">Not Default</li>
+                                        </ul>
+                                        <input type="text" name="type" id="type" class="dropdown__input hidden" hidden value="Default">
+                                    </div>
+                                </div>
+                                <div class="api__table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Parameters</th>
+                                                <th>Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>key</td>
+                                                <td>Your API key</td>
+                                            </tr>
+                                            <tr>
+                                                <td>action</td>
+                                                <td>add</td>
+                                            </tr>
+                                            <tr>
+                                                <td>service</td>
+                                                <td>Service ID</td>
+                                            </tr>
+                                            <tr>
+                                                <td>link</td>
+                                                <td>Link to page</td>
+                                            </tr>
+                                            <tr>
+                                                <td>comments</td>
+                                                <td>Comments list separated by \r\n or \n</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <h3 class="api__title color-accent">Example response</h3>
+                                <div class="api__code">
+                                    <code>
+                                        <pre>@@include('./html/codes/_text-2.txt')</pre>
+                                    </code>
+                                    <button type="button" aria-label="copy" class="api__code-copy btn-copy icon-copy"></button>
+                                </div>
+                            </div>
+                            <div class="api__section">
+                                <h2 class="api__title color-green">Order status</h2>
+                                <div class="api__table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Parameters</th>
+                                                <th>Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>key</td>
+                                                <td>Your API key</td>
+                                            </tr>
+                                            <tr>
+                                                <td>action</td>
+                                                <td>status</td>
+                                            </tr>
+                                            <tr>
+                                                <td>order</td>
+                                                <td>Order ID</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <h3 class="api__title color-accent">Example response</h3>
+                                <div class="api__code">
+                                    <code>
+                                        <pre>@@include('./html/codes/_text-3.txt')</pre>
+                                    </code>
+                                    <button type="button" aria-label="copy" class="api__code-copy btn-copy icon-copy"></button>
+                                </div>
+                            </div>
+                            <div class="api__section">
+                                <h2 class="api__title color-green">Multiple orders status</h2>
+                                <div class="api__table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Parameters</th>
+                                                <th>Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>key</td>
+                                                <td>Your API key</td>
+                                            </tr>
+                                            <tr>
+                                                <td>action</td>
+                                                <td>status</td>
+                                            </tr>
+                                            <tr>
+                                                <td>order</td>
+                                                <td>Order IDs (separated by a comma, up to 100 IDs)</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <h3 class="api__title color-accent">Example response</h3>
+                                <div class="api__code">
+                                    <code>
+                                        <pre>@@include('./html/codes/_text-4.txt')</pre>
+                                    </code>
+                                    <button type="button" aria-label="copy" class="api__code-copy btn-copy icon-copy"></button>
+                                </div>
+                            </div>
+                            <div class="api__section">
+                                <h2 class="api__title color-green">Create refill</h2>
+                                <div class="api__table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Parameters</th>
+                                                <th>Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>key</td>
+                                                <td>Your API key</td>
+                                            </tr>
+                                            <tr>
+                                                <td>action</td>
+                                                <td>refill</td>
+                                            </tr>
+                                            <tr>
+                                                <td>order</td>
+                                                <td>Order ID</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <h3 class="api__title color-accent">Example response</h3>
+                                <div class="api__code">
+                                    <code>
+                                        <pre>@@include('./html/codes/_text-5.txt')</pre>
+                                    </code>
+                                    <button type="button" aria-label="copy" class="api__code-copy btn-copy icon-copy"></button>
+                                </div>
+                            </div>
+                            <div class="api__section">
+                                <h2 class="api__title color-green">Create multiple refill</h2>
+                                <div class="api__table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Parameters</th>
+                                                <th>Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>key</td>
+                                                <td>Your API key</td>
+                                            </tr>
+                                            <tr>
+                                                <td>action</td>
+                                                <td>refill</td>
+                                            </tr>
+                                            <tr>
+                                                <td>order</td>
+                                                <td>Order IDs (separated by a comma, up to 100 IDs)</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <h3 class="api__title color-accent">Example response</h3>
+                                <div class="api__code">
+                                    <code>
+                                        <pre>@@include('./html/codes/_text-6.txt')</pre>
+                                    </code>
+                                    <button type="button" aria-label="copy" class="api__code-copy btn-copy icon-copy"></button>
+                                </div>
+                            </div>
+                            <div class="api__section">
+                                <h2 class="api__title color-green">Get refill status</h2>
+                                <div class="api__table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Parameters</th>
+                                                <th>Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>key</td>
+                                                <td>Your API key</td>
+                                            </tr>
+                                            <tr>
+                                                <td>action</td>
+                                                <td>refill_status</td>
+                                            </tr>
+                                            <tr>
+                                                <td>order</td>
+                                                <td>Refill ID</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <h3 class="api__title color-accent">Example response</h3>
+                                <div class="api__code">
+                                    <code>
+                                        <pre>@@include('./html/codes/_text-7.txt')</pre>
+                                    </code>
+                                    <button type="button" aria-label="copy" class="api__code-copy btn-copy icon-copy"></button>
+                                </div>
+                            </div>
+                            <div class="api__section">
+                                <h2 class="api__title color-green">Get multiple refill status</h2>
+                                <div class="api__table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Parameters</th>
+                                                <th>Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>key</td>
+                                                <td>Your API key</td>
+                                            </tr>
+                                            <tr>
+                                                <td>action</td>
+                                                <td>refill_status</td>
+                                            </tr>
+                                            <tr>
+                                                <td>order</td>
+                                                <td>Refill IDs (separated by a comma, up to 100 IDs)</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <h3 class="api__title color-accent">Example response</h3>
+                                <div class="api__code">
+                                    <code>
+                                        <pre>@@include('./html/codes/_text-8.txt')</pre>
+                                    </code>
+                                    <button type="button" aria-label="copy" class="api__code-copy btn-copy icon-copy"></button>
+                                </div>
+                            </div>
+                            <div class="api__section">
+                                <h2 class="api__title color-green">Create cancel</h2>
+                                <div class="api__table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Parameters</th>
+                                                <th>Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>key</td>
+                                                <td>Your API key</td>
+                                            </tr>
+                                            <tr>
+                                                <td>action</td>
+                                                <td>cancel</td>
+                                            </tr>
+                                            <tr>
+                                                <td>order</td>
+                                                <td>Order IDs (separated by a comma, up to 100 IDs)</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <h3 class="api__title color-accent">Example response</h3>
+                                <div class="api__code">
+                                    <code>
+                                        <pre>@@include('./html/codes/_text-9.txt')</pre>
+                                    </code>
+                                    <button type="button" aria-label="copy" class="api__code-copy btn-copy icon-copy"></button>
+                                </div>
+                            </div>
+                            <div class="api__section">
+                                <h2 class="api__title color-green">User balance</h2>
+                                <div class="api__table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Parameters</th>
+                                                <th>Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>key</td>
+                                                <td>Your API key</td>
+                                            </tr>
+                                            <tr>
+                                                <td>action</td>
+                                                <td>balance</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <h3 class="api__title color-accent">Example response</h3>
+                                <div class="api__code">
+                                    <code>
+                                        <pre>@@include('./html/codes/_text-10.txt')</pre>
+                                    </code>
+                                    <button type="button" aria-label="copy" class="api__code-copy btn-copy icon-copy"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+        @@include('html/_modal.html', {})
+        @@include('html/_js.html', {})
+    </body>
+</html>

@@ -188,6 +188,7 @@
 	& tbody {
 		@media (min-width: $md4) {
 			position: relative;
+			z-index: 1;
 			&::before {
 				content: "";
 				position: absolute;

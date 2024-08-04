@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" itemprop="description" content="описание страницы">
+	<meta name="keywords" itemprop="keywords" content="ключевые слова">
+	<!-- favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="theme-color" content="#ffffff">
+	<!-- favicon -->
+	<!-- Open Graph  -->
+	<meta property="og:type" content="business.business">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="627">
+	<meta property="og:site_name" content="">
+	<meta property="og:locale" content="en_EN">
+	<!-- Open Graph  -->
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:title" content="">
+	<meta property="twitter:description" content="">
+	<meta property="twitter:site" content="">
+	<meta property="twitter:url" content="">
+	<meta property="twitter:image:src" content="">
+	<!-- Twitter -->
+	<!-- plugnis -->
+	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240804170331">
+	<link rel="stylesheet" href="css/libs/fancybox.css?_v=20240804170331">
+	<!-- plugnis -->
+	<link rel="stylesheet" href="css/reset.min.css?_v=20240804170331">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240804170331">
+</head>
+
+<body>
+	<div class="canvas">
+		<canvas id="canvas"></canvas>
+	</div>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="/" class="header__logo">
+					<span class="header__logo-icon">
+						<picture>
+							<source srcset="img/butterfly.webp" type="image/webp"><img src="img/butterfly.png" alt="logo icon">
+						</picture>
+					</span> Smm3 </a>
+				<div class="header__select dropdown">
+					<button type="button" class="dropdown__button icon-chevron" aria-expanded="false" aria-haspopup="true"> ENG </button>
+					<div class="dropdown__content" aria-hidden="true">
+						<ul class="dropdown__list" role="listbox">
+							<li role="option" data-value="ENG" aria-checked="true" class="dropdown__list-item">ENG</li>
+							<li role="option" data-value="RUS" class="dropdown__list-item">RUS</li>
+						</ul>
+						<input type="text" name="lang" id="lang" class="dropdown__input hidden" hidden="" value="ENG">
+					</div>
+				</div>
+				<div class="header__menu menu">
+					<nav aria-label="menu" class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a href="/services.html" class="menu__link icon-category"> Services </a>
+							</li>
+							<li class="menu__item">
+								<a href="/api.html" class="menu__link icon-connection active"> API </a>
+							</li>
+						</ul>
+					</nav>
+					<div class="menu__actions">
+						<a href="" class="menu__action btn btn-secondary">Sign in</a>
+						<a href="/signup.html" class="menu__action btn btn-primary">Sign UP</a>
+					</div>
+				</div>
+				<button type="button" aria-label="Open mobile menu" class="menu__icon icon-menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+		</header>
+		<main class="page">
+			<div class="api">
+				<div class="api__container">
+					<div class="api__body">
+						<div class="api__section">
+							<h2 class="api__title color-green">API Docs</h2>
+							<ul class="api__list">
+								<li class="api__item">
+									<div class="api__caption">POST</div>
+									<div class="api__field">
+										<div class="api__field-value">HTTP Method</div>
+										<button type="button" aria-label="copy" class="api__field-copy btn-copy icon-copy"></button>
+									</div>
+								</li>
+								<li class="api__item">
+									<div class="api__caption">API URL</div>
+									<div class="api__field">
+										<div class="api__field-value">https://smm3.ru/api/v2</div>
+										<button type="button" aria-label="copy" class="api__field-copy btn-copy icon-copy"></button>
+									</div>
+								</li>
+								<li class="api__item">
+									<div class="api__caption">Response format</div>
+									<div class="api__field">
+										<div class="api__field-value">JSON</div>
+										<button type="button" aria-label="copy" class="api__field-copy btn-copy icon-copy"></button>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="api__section">
+							<h2 class="api__title color-green">Service list</h2>
+							<div class="api__table">
+								<table>
+									<thead>
+										<tr>
+											<th>Parameters</th>
+											<th>Description</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>key</td>
+											<td>Your API key</td>
+										</tr>
+										<tr>
+											<td>action</td>
+											<td>services</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<h3 class="api__title color-accent">Example response</h3>
+							<div class="api__code">
+								<code>
+									<pre>    {
+        "service": 1,
+        "name": "Followers",
+        "type": "Default",
+        "category": "First Category",
+        "rate": "0.90",
+        "min": "50",
+        "max": "10000",
+        "refill": true,
+        "cancel": true
+    },
+    {
+        "service": 2,
+        "name": "Comments",
+        "type": "Custom Comments",
+        "category": "Second Category",
+        "rate": "8",
+        "min": "10",
+        "max": "1500",
+        "refill": false,
+        "cancel": true
+    }
+]</pre>
+								</code>
+								<button type="button" aria-label="copy" class="api__code-copy btn-copy icon-copy"></button>
+							</div>
+						</div>
+						<div class="api__section">
+							<h2 class="api__title color-green">Add order</h2>
+							<div class="api__dropdown dropdown">
+								<button type="button" class="dropdown__button icon-chevron" aria-expanded="false" aria-haspopup="true"> Default </button>
+								<div class="dropdown__content" aria-hidden="true">
+									<ul class="dropdown__list" role="listbox">
+										<li role="option" data-value="Default" aria-checked="true" class="dropdown__list-item">Default</li>
+										<li role="option" data-value="Not Default" class="dropdown__list-item">Not Default</li>
+									</ul>
+									<input type="text" name="type" id="type" class="dropdown__input hidden" hidden="" value="Default">
+								</div>
+							</div>
+							<div class="api__table">
+								<table>
+									<thead>
+										<tr>
+											<th>Parameters</th>
+											<th>Description</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>key</td>
+											<td>Your API key</td>
+										</tr>
+										<tr>
+											<td>action</td>
+											<td>add</td>
+										</tr>
+										<tr>
+											<td>service</td>
+											<td>Service ID</td>
+										</tr>
+										<tr>
+											<td>link</td>
+											<td>Link to page</td>
+										</tr>
+										<tr>
+											<td>comments</td>
+											<td>Comments list separated by \r\n or \n</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<h3 class="api__title color-accent">Example response</h3>
+							<div class="api__code">
+								<code>
+									<pre>{
+    "order": 23501
+}</pre>
+								</code>
+								<button type="button" aria-label="copy" class="api__code-copy btn-copy icon-copy"></button>
+							</div>
+						</div>
+						<div class="api__section">
+							<h2 class="api__title color-green">Order status</h2>
+							<div class="api__table">
+								<table>
+									<thead>
+										<tr>
+											<th>Parameters</th>
+											<th>Description</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>key</td>
+											<td>Your API key</td>
+										</tr>
+										<tr>
+											<td>action</td>
+											<td>status</td>
+										</tr>
+										<tr>
+											<td>order</td>
+											<td>Order ID</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<h3 class="api__title color-accent">Example response</h3>
+							<div class="api__code">
+								<code>
+									<pre>{
+    "charge": "0.27819",
+    "start_count": "3572",
+    "status": "Partial",
+    "remains": "157",
+    "currency": "USD"
+}</pre>
+								</code>
+								<button type="button" aria-label="copy" class="api__code-copy btn-copy icon-copy"></button>
+							</div>
+						</div>
+						<div class="api__section">
+							<h2 class="api__title color-green">Multiple orders status</h2>
+							<div class="api__table">
+								<table>
+									<thead>
+										<tr>
+											<th>Parameters</th>
+											<th>Description</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>key</td>
+											<td>Your API key</td>
+										</tr>
+										<tr>
+											<td>action</td>
+											<td>status</td>
+										</tr>
+										<tr>
+											<td>order</td>
+											<td>Order IDs (separated by a comma, up to 100 IDs)</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<h3 class="api__title color-accent">Example response</h3>
+							<div class="api__code">
+								<code>
+									<pre>{
+    "1": {
+        "charge": "0.27819",
+        "start_count": "3572",
+        "status": "Partial",
+        "remains": "157",
+        "currency": "USD"
+    },
+    "10": {
+        "error": "Incorrect order ID"
+    },
+    "100": {
+        "charge": "1.44219",
+        "start_count": "234",
+        "status": "In progress",
+        "remains": "10",
+        "currency": "USD"
+    }
+}</pre>
+								</code>
+								<button type="button" aria-label="copy" class="api__code-copy btn-copy icon-copy"></button>
+							</div>
+						</div>
+						<div class="api__section">
+							<h2 class="api__title color-green">Create refill</h2>
+							<div class="api__table">
+								<table>
+									<thead>
+										<tr>
+											<th>Parameters</th>
+											<th>Description</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>key</td>
+											<td>Your API key</td>
+										</tr>
+										<tr>
+											<td>action</td>
+											<td>refill</td>
+										</tr>
+										<tr>
+											<td>order</td>
+											<td>Order ID</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<h3 class="api__title color-accent">Example response</h3>
+							<div class="api__code">
+								<code>
+									<pre>{
+    "refill": "1"
+}
+</pre>
+								</code>
+								<button type="button" aria-label="copy" class="api__code-copy btn-copy icon-copy"></button>
+							</div>
+						</div>
+						<div class="api__section">
+							<h2 class="api__title color-green">Create multiple refill</h2>
+							<div class="api__table">
+								<table>
+									<thead>
+										<tr>
+											<th>Parameters</th>
+											<th>Description</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>key</td>
+											<td>Your API key</td>
+										</tr>
+										<tr>
+											<td>action</td>
+											<td>refill</td>
+										</tr>
+										<tr>
+											<td>order</td>
+											<td>Order IDs (separated by a comma, up to 100 IDs)</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<h3 class="api__title color-accent">Example response</h3>
+							<div class="api__code">
+								<code>
+									<pre>[
+    {
+        "order": 1,
+        "refill": 1
+    },
+    {
+        "order": 2,
+        "refill": 2
+    },
+    {
+        "order": 3,
+        "refill": {
+            "error": "Incorrect order ID"
+        }
+    }
+]</pre>
+								</code>
+								<button type="button" aria-label="copy" class="api__code-copy btn-copy icon-copy"></button>
+							</div>
+						</div>
+						<div class="api__section">
+							<h2 class="api__title color-green">Get refill status</h2>
+							<div class="api__table">
+								<table>
+									<thead>
+										<tr>
+											<th>Parameters</th>
+											<th>Description</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>key</td>
+											<td>Your API key</td>
+										</tr>
+										<tr>
+											<td>action</td>
+											<td>refill_status</td>
+										</tr>
+										<tr>
+											<td>order</td>
+											<td>Refill ID</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<h3 class="api__title color-accent">Example response</h3>
+							<div class="api__code">
+								<code>
+									<pre>{
+    "status": "Completed"
+}
+</pre>
+								</code>
+								<button type="button" aria-label="copy" class="api__code-copy btn-copy icon-copy"></button>
+							</div>
+						</div>
+						<div class="api__section">
+							<h2 class="api__title color-green">Get multiple refill status</h2>
+							<div class="api__table">
+								<table>
+									<thead>
+										<tr>
+											<th>Parameters</th>
+											<th>Description</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>key</td>
+											<td>Your API key</td>
+										</tr>
+										<tr>
+											<td>action</td>
+											<td>refill_status</td>
+										</tr>
+										<tr>
+											<td>order</td>
+											<td>Refill IDs (separated by a comma, up to 100 IDs)</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<h3 class="api__title color-accent">Example response</h3>
+							<div class="api__code">
+								<code>
+									<pre>[
+    {
+        "refill": 1,
+        "status": "Completed"
+    },
+    {
+        "refill": 2,
+        "status": "Rejected"
+    },
+    {
+        "refill": 3,
+        "status": {
+            "error": "Refill not found"
+        }
+    }
+]</pre>
+								</code>
+								<button type="button" aria-label="copy" class="api__code-copy btn-copy icon-copy"></button>
+							</div>
+						</div>
+						<div class="api__section">
+							<h2 class="api__title color-green">Create cancel</h2>
+							<div class="api__table">
+								<table>
+									<thead>
+										<tr>
+											<th>Parameters</th>
+											<th>Description</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>key</td>
+											<td>Your API key</td>
+										</tr>
+										<tr>
+											<td>action</td>
+											<td>cancel</td>
+										</tr>
+										<tr>
+											<td>order</td>
+											<td>Order IDs (separated by a comma, up to 100 IDs)</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<h3 class="api__title color-accent">Example response</h3>
+							<div class="api__code">
+								<code>
+									<pre>[
+    {
+        "order": 9,
+        "cancel": {
+            "error": "Incorrect order ID"
+        }
+    },
+    {
+        "order": 2,
+        "cancel": 1
+    }</pre>
+								</code>
+								<button type="button" aria-label="copy" class="api__code-copy btn-copy icon-copy"></button>
+							</div>
+						</div>
+						<div class="api__section">
+							<h2 class="api__title color-green">User balance</h2>
+							<div class="api__table">
+								<table>
+									<thead>
+										<tr>
+											<th>Parameters</th>
+											<th>Description</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>key</td>
+											<td>Your API key</td>
+										</tr>
+										<tr>
+											<td>action</td>
+											<td>balance</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<h3 class="api__title color-accent">Example response</h3>
+							<div class="api__code">
+								<code>
+									<pre>{
+    "balance": "100.84292",
+    "currency": "USD"
+}</pre>
+								</code>
+								<button type="button" aria-label="copy" class="api__code-copy btn-copy icon-copy"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container"> smm3.ru © 2024 All Rights Reserved. </div>
+		</footer>
+	</div>
+	<div id="details" class="popup">
+		<button type="button" data-fancybox-close="" aria-label="close modal" class="popup__close icon-close"></button>
+		<div class="popup__header">
+			<div class="popup__header-num">5382</div>
+			<div class="popup__header-name">Instagram - Reel Views | Start 0 - 1 Hour | Speed: ~500,000 Per Day</div>
+		</div>
+		<div class="popup__content">
+			<div class="popup__desc"> Quality: Real <br> Speed: 20-50K/D <br> Refill: 365 Days Refill <br> Link: Username <br> <br> Start Time: Instant <br> 📍 provider : our platforms <br> 📌 This is our exclusive service, if the service encounters a problem, just inform the support so that the problem can be solved completely <br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br> ~recommended~<wbr>bestseller~<wbr>updated~<wbr>instant~<wbr>fast~<wbr>favorite <br> <br> <br> Quality: Real <br> Speed: 20-50K/D <br> Refill: 365 Days Refill <br> Link: Username <br> <br> Start Time: Instant <br> 📍 provider : our platforms <br> 📌 This is our exclusive service, if the service encounters a problem, just inform the support so that the problem can be solved completely <br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br> ~recommended~<wbr>bestseller~<wbr>updated~<wbr>instant~<wbr>fast~<wbr>favorite <br> <br> <br> Quality: Real <br> Speed: 20-50K/D <br> Refill: 365 Days Refill <br> Link: Username <br> <br> Start Time: Instant <br> 📍 provider : our platforms <br> 📌 This is our exclusive service, if the service encounters a problem, just inform the support so that the problem can be solved completely <br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br> ~recommended~<wbr>bestseller~<wbr>updated~<wbr>instant~<wbr>fast~<wbr>favorite
+			</div>
+		</div>
+		<a href="" class="popup__btn btn btn-primary btn-lg">Create order</a>
+	</div> <!-- plugnis -->
+	<script src="js/libs/swiper-bundle.min.js?_v=20240804170331"></script>
+	<script src="js/libs/fancybox.umd.js?_v=20240804170331"></script>
+	<!-- <script src="js/libs/webgl.js?_v=20240804170331"></script> -->
+	<!-- plugnis -->
+	<script src="js/app.min.js?_v=20240804170331"></script>
+</body>
+
+</html>
