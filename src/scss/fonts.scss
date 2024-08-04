@@ -15,13 +15,6 @@
 @font-face {
                             font-family: 'RobotoCondensed';
                             font-display: swap;
-                            src: url("../fonts/RobotoCondensed-Bold.woff2") format("woff2"), url("../fonts/RobotoCondensed-Bold.woff") format("woff");
-                            font-weight: 700;
-                            font-style: normal;
-                        }
-@font-face {
-                            font-family: 'RobotoCondensed';
-                            font-display: swap;
                             src: url("../fonts/RobotoCondensed-Light.woff2") format("woff2"), url("../fonts/RobotoCondensed-Light.woff") format("woff");
                             font-weight: 300;
                             font-style: normal;
@@ -29,8 +22,15 @@
 @font-face {
                             font-family: 'RobotoCondensed';
                             font-display: swap;
-                            src: url("../fonts/RobotoCondensed-Medium.woff2") format("woff2"), url("../fonts/RobotoCondensed-Medium.woff") format("woff");
-                            font-weight: 500;
+                            src: url("../fonts/RobotoCondensed-SemiBold.woff2") format("woff2"), url("../fonts/RobotoCondensed-SemiBold.woff") format("woff");
+                            font-weight: 600;
+                            font-style: normal;
+                        }
+@font-face {
+                            font-family: 'RobotoCondensed';
+                            font-display: swap;
+                            src: url("../fonts/RobotoCondensed-Bold.woff2") format("woff2"), url("../fonts/RobotoCondensed-Bold.woff") format("woff");
+                            font-weight: 700;
                             font-style: normal;
                         }
 @font-face {
@@ -43,7 +43,7 @@
 @font-face {
                             font-family: 'RobotoCondensed';
                             font-display: swap;
-                            src: url("../fonts/RobotoCondensed-SemiBold.woff2") format("woff2"), url("../fonts/RobotoCondensed-SemiBold.woff") format("woff");
-                            font-weight: 600;
+                            src: url("../fonts/RobotoCondensed-Medium.woff2") format("woff2"), url("../fonts/RobotoCondensed-Medium.woff") format("woff");
+                            font-weight: 500;
                             font-style: normal;
                         }

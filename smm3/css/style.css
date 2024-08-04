@@ -19,14 +19,6 @@
 @font-face {
   font-family: "RobotoCondensed";
   font-display: swap;
-  src: url("../fonts/RobotoCondensed-Bold.woff2") format("woff2"), url("../fonts/RobotoCondensed-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "RobotoCondensed";
-  font-display: swap;
   src: url("../fonts/RobotoCondensed-Light.woff2") format("woff2"), url("../fonts/RobotoCondensed-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
@@ -35,8 +27,16 @@
 @font-face {
   font-family: "RobotoCondensed";
   font-display: swap;
-  src: url("../fonts/RobotoCondensed-Medium.woff2") format("woff2"), url("../fonts/RobotoCondensed-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/RobotoCondensed-SemiBold.woff2") format("woff2"), url("../fonts/RobotoCondensed-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RobotoCondensed";
+  font-display: swap;
+  src: url("../fonts/RobotoCondensed-Bold.woff2") format("woff2"), url("../fonts/RobotoCondensed-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -51,8 +51,8 @@
 @font-face {
   font-family: "RobotoCondensed";
   font-display: swap;
-  src: url("../fonts/RobotoCondensed-SemiBold.woff2") format("woff2"), url("../fonts/RobotoCondensed-SemiBold.woff") format("woff");
-  font-weight: 600;
+  src: url("../fonts/RobotoCondensed-Medium.woff2") format("woff2"), url("../fonts/RobotoCondensed-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -3920,12 +3920,22 @@ body.lock {
     left: 50%;
     width: 100vw;
     display: block;
-    height: 0.078125rem;
+    height: 100%;
+    pointer-events: none;
+    -webkit-transition: background-color 0.3s ease 0s;
+    transition: background-color 0.3s ease 0s;
+    z-index: -1;
     border-bottom: 0.09375rem solid #352c33;
   }
 
   .person__funds .person__items-table tr:not(:last-child) {
     border-bottom: 0;
+  }
+}
+
+@media (min-width: 743.98px) and (any-hover: hover) {
+  .person__funds .person__items-table tr:hover {
+    background: transparent;
   }
 }
 
@@ -4465,6 +4475,10 @@ body.lock {
   }
 
   .person__items-table table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.07);
+  }
+
+  .person__items-table table tbody tr:hover::before {
     background: rgba(255, 255, 255, 0.07);
   }
 

@@ -848,6 +848,9 @@
 					@media (any-hover: hover) {
 						&:hover {
 							background: rgba(255, 255, 255, 0.07);
+							&::before {
+								background: rgba(255, 255, 255, 0.07);
+							}
 						}
 					}
 				}
@@ -1000,13 +1003,21 @@
 						left: 50%;
 						width: 100vw;
 						display: block;
-						height: rem(1.25);
+						height: 100%;
+						pointer-events: none;
+						transition: background-color 0.3s ease 0s;
+						z-index: -1;
 						border-bottom: 0.09375rem solid #352c33;
 					}
 					&:not(:last-child) {
 						border-bottom: 0;
 					}
 					border-bottom: 0;
+					@media (any-hover: hover) {
+						&:hover {
+							background: transparent;
+						}
+					}
 				}
 			}
 		}
