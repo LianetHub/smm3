@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('html/_head.html', {
+    'title': ''
+    })
+    <body>
+        <div class="canvas">
+            <canvas id="canvas"></canvas>
+        </div>
+        <div class="wrapper">
+            @@include('html/_header-login.html', {
+            "active": 7
+            })
+            <main class="page">
+                <div class="person">
+                    <div class="person__container">
+                        <div class="person__content">
+                            @@include('./html/_sidebar.html', {
+                            "active": 7
+                            })
+                            <div class="person__body">
+                                <h1 class="person__title">Child panel</h1>
+                                <div class="person__columns">
+                                    <div class="person__column">
+                                        <form action="#" class="person__form">
+                                            <div class="person__field">
+                                                <div class="person__caption">Домена</div>
+                                                <input type="text" name="domen" class="form__input">
+                                                <div class="person__field-hint icon-alert-circle">
+                                                    <strong>Пожалуйста, измените DNS-сервера на:</strong>
+                                                    <p>ns1.perfectdns.com</p>
+                                                    <p>ns2.perfectdns.com</p>
+                                                </div>
+                                            </div>
+                                            <div class="person__field">
+                                                <div class="person__caption">Валюта</div>
+                                                <div class="person__select dropdown">
+                                                    <button type="button" class="dropdown__button icon-chevron" aria-expanded="false" aria-haspopup="true">
+                                                        United States Dollars (USD)
+                                                    </button>
+                                                    <div class="dropdown__content" aria-hidden="true">
+                                                        <ul class="dropdown__list" role="listbox">
+                                                            <li role="option" data-value="United States Dollars (USD)" aria-checked="true" class="dropdown__list-item">United States Dollars (USD)</li>
+                                                            <li role="option" data-value="Russian Rubbles (RUB)" class="dropdown__list-item">Russian Rubbles (RUB)</li>
+                                                        </ul>
+                                                        <input type="text" name="service" id="service" class="dropdown__input hidden" hidden value="United States Dollars (USD)">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="person__field">
+                                                <div class="person__caption">Имя пользователя администратора</div>
+                                                <input type="email" name="email" class="form__input" placeholder="ahl009yanded@mail.ru">
+                                            </div>
+                                            <div class="person__field">
+                                                <div class="person__caption">Пароль</div>
+                                                <input type="password" name="psw" class="form__input" placeholder="***********">
+                                            </div>
+                                            <div class="person__field">
+                                                <div class="person__caption">Подтвердите пароль</div>
+                                                <input type="password" name="repeat-psw" class="form__input" placeholder="***********">
+                                            </div>
+                                            <div class="person__field">
+                                                <div class="person__caption">Стоимость в месяц</div>
+                                                <input type="number" name="price" class="form__input" placeholder="2500.00 ₽">
+                                            </div>
+                                            <button type="submit" class="btn btn-primary btn-lg">order</button>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+        @@include('html/_modal.html', {})
+        @@include('html/_js.html', {})
+    </body>
+</html>

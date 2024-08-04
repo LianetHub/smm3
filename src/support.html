@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('html/_head.html', {
+    'title': ''
+    })
+    <body>
+        <div class="canvas">
+            <canvas id="canvas"></canvas>
+        </div>
+        <div class="wrapper">
+            @@include('html/_header-login.html', {
+            "active": 6
+            })
+            <main class="page">
+                <div class="person">
+                    <div class="person__container">
+                        <div class="person__content">
+                            @@include('./html/_sidebar.html', {
+                            "active": 6
+                            })
+                            <div class="person__body">
+                                <h1 class="person__title">Support 24/7</h1>
+                                <div class="person__columns sm-gap">
+                                    <div class="person__column">
+                                        <form action="#" class="person__mass-order">
+                                            <div class="person__field">
+                                                <div class="person__caption">Тема</div>
+                                                <input type="text" name="name" class="form__input">
+                                            </div>
+                                            <div class="person__field">
+                                                <div class="person__caption">Сообщение</div>
+                                                <textarea name="mass-order" class="form__textarea form__textarea-sm"></textarea>
+                                            </div>
+                                            <div class="person__field">
+                                                <label class="form__file">
+                                                    <input type="file" name="attach" class="form__file-input hidden" hidden>
+                                                    <span class="form__file-field icon-attach">
+                                                        Прикрепить файлы
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary btn-lg">Create order</button>
+                                        </form>
+                                    </div>
+                                    <div class="person__column">
+                                        <form action="#" class="person__form">
+                                            <div class="person__field icon-search person__field-offset">
+                                                <input type="text" name="search" class="form__input" placeholder="Поиск">
+                                            </div>
+                                        </form>
+                                        <ul class="person__messages">
+                                            <li class="person__messages-item">
+                                                <a href="" class="person__messages-link">
+                                                    <span class="person__messages-header">
+                                                        <span class="person__messages-quantity">
+                                                            <img src="@img/sms-notification.svg" alt="icon">
+                                                            <span class="person__messages-quantity-value">
+                                                                2
+                                                            </span>
+                                                        </span>
+                                                        <span class="person__messages-id">
+                                                            ID 3212
+                                                        </span>
+                                                    </span>
+                                                    <span class="person__messages-list">
+                                                        <span class="person__messages-list-item">
+                                                            <span class="person__messages-prop">Тема</span>
+                                                            <span class="person__messages-text">Cверкнула серебром в свете настольной лампы...</span>
+                                                        </span>
+                                                        <span class="person__messages-list-item">
+                                                            <span class="person__messages-prop">Статус</span>
+                                                            <span class="person__messages-status">Отвечен</span>
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="person__messages-item">
+                                                <a href="" class="person__messages-link">
+                                                    <span class="person__messages-header">
+                                                        <span class="person__messages-quantity">
+                                                            <img src="@img/sms.svg" alt="icon">
+                                                            <span class="person__messages-quantity-value">
+                                                                2
+                                                            </span>
+                                                        </span>
+                                                        <span class="person__messages-id">
+                                                            ID 3213
+                                                        </span>
+                                                    </span>
+                                                    <span class="person__messages-list">
+                                                        <span class="person__messages-list-item">
+                                                            <span class="person__messages-prop">Тема</span>
+                                                            <span class="person__messages-text">Cверкнула серебром в свете настольной лампы...</span>
+                                                        </span>
+                                                        <span class="person__messages-list-item">
+                                                            <span class="person__messages-prop">Статус</span>
+                                                            <span class="person__messages-status">Отвечен</span>
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="person__messages-item">
+                                                <a href="" class="person__messages-link">
+                                                    <span class="person__messages-header">
+                                                        <span class="person__messages-quantity">
+                                                            <img src="@img/sms.svg" alt="icon">
+                                                            <span class="person__messages-quantity-value">
+                                                                2
+                                                            </span>
+                                                        </span>
+                                                        <span class="person__messages-id">
+                                                            ID 3213
+                                                        </span>
+                                                    </span>
+                                                    <span class="person__messages-list">
+                                                        <span class="person__messages-list-item">
+                                                            <span class="person__messages-prop">Тема</span>
+                                                            <span class="person__messages-text">Cверкнула серебром в свете настольной лампы...</span>
+                                                        </span>
+                                                        <span class="person__messages-list-item">
+                                                            <span class="person__messages-prop">Статус</span>
+                                                            <span class="person__messages-status">Отвечен</span>
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+        @@include('html/_modal.html', {})
+        @@include('html/_js.html', {})
+    </body>
+</html>

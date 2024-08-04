@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('html/_head.html', {
+    'title': ''
+    })
+    <body>
+        <div class="canvas">
+            <canvas id="canvas"></canvas>
+        </div>
+        <div class="wrapper">
+            @@include('html/_header-login.html', {
+            "active": 6
+            })
+            <main class="page">
+                <div class="person">
+                    <div class="person__container">
+                        <div class="person__content">
+                            @@include('./html/_sidebar.html', {
+                            "active": 6
+                            })
+                            <div class="person__body">
+                                <h1 class="person__title">Mass order</h1>
+                                <div class="person__columns">
+                                    <div class="person__column">
+                                        <form action="#" class="person__mass-order">
+                                            <div class="person__field">
+                                                <div class="person__caption">One order per line in format</div>
+                                                <textarea name="mass-order" class="form__textarea" placeholder="ID услуги | Ссылка | Количество"></textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary btn-lg">Create order</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+        @@include('html/_modal.html', {})
+        @@include('html/_js.html', {})
+    </body>
+</html>
