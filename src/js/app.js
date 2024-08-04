@@ -65,6 +65,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
+        // select row in table 
+        if (target.matches('.person__items-select')) {
+            target.classList.toggle('active');
+            target.closest('tr').classList.toggle('selected');
+        }
+
 
     });
 

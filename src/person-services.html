@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('html/_head.html', {
+    'title': ''
+    })
+    <body>
+        <div class="canvas">
+            <canvas id="canvas"></canvas>
+        </div>
+        <div class="wrapper">
+            @@include('html/_header-login.html', {
+            "active": 3
+            })
+            <main class="page">
+                <div class="person">
+                    <div class="person__container">
+                        <div class="person__wrapper">
+                            @@include('./html/_sidebar.html', {
+                            "active": 3
+                            })
+                            <div class="person__body">
+                                <div class="person__body-main">
+                                    <h1 class="person__title">Services </h1>
+                                    <div class="person__items">
+                                        <form action="#" class="person__items-form">
+                                            <div class="person__dropdown dropdown dropdown-accent">
+                                                <button type="button" class="dropdown__button icon-chevron" aria-expanded="false" aria-haspopup="true">
+                                                    Instagram – Reels
+                                                </button>
+                                                <div class="dropdown__content" aria-hidden="true">
+                                                    <ul class="dropdown__list" role="listbox">
+                                                        <li role="option" data-value="Instagram – Reels" aria-checked="true" class="dropdown__list-item">Instagram – Reels</li>
+                                                        <li role="option" data-value="Instagram – Stories" class="dropdown__list-item">Instagram – Stories</li>
+                                                    </ul>
+                                                    <input type="text" name="wallet" id="wallet" class="dropdown__input hidden" hidden value="Instagram – Reels">
+                                                </div>
+                                            </div>
+                                            <div class="person__field icon-search">
+                                                <input type="text" name="search" class="form__input" placeholder="Поиск">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="person__items-body">
+                                    <h3 class="person__items-caption title-sm">
+                                        <div class="person__items-icon">
+                                            <img src="@img/instargram.svg" alt="inst">
+                                        </div>
+                                        Instagram – Reels
+                                    </h3>
+                                    <div class="person__items-table">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-left">ID</th>
+                                                    <th class="text-left">Service</th>
+                                                    <th>Rate per 1000</th>
+                                                    <th>Min order - Max order</th>
+                                                    <th>Details</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-label="ID">
+                                                        <div class="person__items-id">
+                                                            <button type="button" aria-label="select row" class="person__items-select"></button>
+                                                            45663
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Service">
+                                                        <div class="person__items-service">
+                                                            Instagram - Reel Views | Start 0 - 1 Hour | Speed: ~500,000 Per Day
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Rate per 1000">
+                                                        <div class="table__price">
+                                                            19.25 ₽
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Min order – Max order">
+                                                        <div class="table__values">
+                                                            <div class="table__values-min">100</div>
+                                                            -
+                                                            <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Details">
+                                                        <a href="#details" data-fancybox class="btn btn-primary">Description</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="ID">
+                                                        <div class="person__items-id">
+                                                            <button type="button" aria-label="select row" class="person__items-select"></button>
+                                                            45663
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Service">
+                                                        <div class="person__items-service">
+                                                            Instagram - Reel Views | Start 0 - 1 Hour | Speed: ~500,000 Per Day
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Rate per 1000">
+                                                        <div class="table__price">
+                                                            19.25 ₽
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Min order – Max order">
+                                                        <div class="table__values">
+                                                            <div class="table__values-min">100</div>
+                                                            -
+                                                            <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Details">
+                                                        <a href="#details" data-fancybox class="btn btn-primary">Description</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="ID">
+                                                        <div class="person__items-id">
+                                                            <button type="button" aria-label="select row" class="person__items-select"></button>
+                                                            45663
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Service">
+                                                        <div class="person__items-service">
+                                                            Instagram - Reel Views | Start 0 - 1 Hour | Speed: ~500,000 Per Day
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Rate per 1000">
+                                                        <div class="table__price">
+                                                            19.25 ₽
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Min order – Max order">
+                                                        <div class="table__values">
+                                                            <div class="table__values-min">100</div>
+                                                            -
+                                                            <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Details">
+                                                        <a href="#details" data-fancybox class="btn btn-primary">Description</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="ID">
+                                                        <div class="person__items-id">
+                                                            <button type="button" aria-label="select row" class="person__items-select"></button>
+                                                            45663
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Service">
+                                                        <div class="person__items-service">
+                                                            Instagram - Reel Views | Start 0 - 1 Hour | Speed: ~500,000 Per Day
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Rate per 1000">
+                                                        <div class="table__price">
+                                                            19.25 ₽
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Min order – Max order">
+                                                        <div class="table__values">
+                                                            <div class="table__values-min">100</div>
+                                                            -
+                                                            <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Details">
+                                                        <a href="#details" data-fancybox class="btn btn-primary">Description</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="ID">
+                                                        <div class="person__items-id">
+                                                            <button type="button" aria-label="select row" class="person__items-select"></button>
+                                                            45663
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Service">
+                                                        <div class="person__items-service">
+                                                            Instagram - Reel Views | Start 0 - 1 Hour | Speed: ~500,000 Per Day
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Rate per 1000">
+                                                        <div class="table__price">
+                                                            19.25 ₽
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Min order – Max order">
+                                                        <div class="table__values">
+                                                            <div class="table__values-min">100</div>
+                                                            -
+                                                            <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Details">
+                                                        <a href="#details" data-fancybox class="btn btn-primary">Description</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="ID">
+                                                        <div class="person__items-id">
+                                                            <button type="button" aria-label="select row" class="person__items-select"></button>
+                                                            45663
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Service">
+                                                        <div class="person__items-service">
+                                                            Instagram - Reel Views | Start 0 - 1 Hour | Speed: ~500,000 Per Day
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Rate per 1000">
+                                                        <div class="table__price">
+                                                            19.25 ₽
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Min order – Max order">
+                                                        <div class="table__values">
+                                                            <div class="table__values-min">100</div>
+                                                            -
+                                                            <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Details">
+                                                        <a href="#details" data-fancybox class="btn btn-primary">Description</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="ID">
+                                                        <div class="person__items-id">
+                                                            <button type="button" aria-label="select row" class="person__items-select"></button>
+                                                            45663
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Service">
+                                                        <div class="person__items-service">
+                                                            Instagram - Reel Views | Start 0 - 1 Hour | Speed: ~500,000 Per Day
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Rate per 1000">
+                                                        <div class="table__price">
+                                                            19.25 ₽
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Min order – Max order">
+                                                        <div class="table__values">
+                                                            <div class="table__values-min">100</div>
+                                                            -
+                                                            <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Details">
+                                                        <a href="#details" data-fancybox class="btn btn-primary">Description</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="ID">
+                                                        <div class="person__items-id">
+                                                            <button type="button" aria-label="select row" class="person__items-select"></button>
+                                                            45663
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Service">
+                                                        <div class="person__items-service">
+                                                            Instagram - Reel Views | Start 0 - 1 Hour | Speed: ~500,000 Per Day
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Rate per 1000">
+                                                        <div class="table__price">
+                                                            19.25 ₽
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Min order – Max order">
+                                                        <div class="table__values">
+                                                            <div class="table__values-min">100</div>
+                                                            -
+                                                            <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Details">
+                                                        <a href="#details" data-fancybox class="btn btn-primary">Description</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="ID">
+                                                        <div class="person__items-id">
+                                                            <button type="button" aria-label="select row" class="person__items-select"></button>
+                                                            45663
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Service">
+                                                        <div class="person__items-service">
+                                                            Instagram - Reel Views | Start 0 - 1 Hour | Speed: ~500,000 Per Day
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Rate per 1000">
+                                                        <div class="table__price">
+                                                            19.25 ₽
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Min order – Max order">
+                                                        <div class="table__values">
+                                                            <div class="table__values-min">100</div>
+                                                            -
+                                                            <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Details">
+                                                        <a href="#details" data-fancybox class="btn btn-primary">Description</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="ID">
+                                                        <div class="person__items-id">
+                                                            <button type="button" aria-label="select row" class="person__items-select"></button>
+                                                            45663
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Service">
+                                                        <div class="person__items-service">
+                                                            Instagram - Reel Views | Start 0 - 1 Hour | Speed: ~500,000 Per Day
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Rate per 1000">
+                                                        <div class="table__price">
+                                                            19.25 ₽
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Min order – Max order">
+                                                        <div class="table__values">
+                                                            <div class="table__values-min">100</div>
+                                                            -
+                                                            <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Details">
+                                                        <a href="#details" data-fancybox class="btn btn-primary">Description</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="ID">
+                                                        <div class="person__items-id">
+                                                            <button type="button" aria-label="select row" class="person__items-select"></button>
+                                                            45663
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Service">
+                                                        <div class="person__items-service">
+                                                            Instagram - Reel Views | Start 0 - 1 Hour | Speed: ~500,000 Per Day
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Rate per 1000">
+                                                        <div class="table__price">
+                                                            19.25 ₽
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Min order – Max order">
+                                                        <div class="table__values">
+                                                            <div class="table__values-min">100</div>
+                                                            -
+                                                            <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Details">
+                                                        <a href="#details" data-fancybox class="btn btn-primary">Description</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="ID">
+                                                        <div class="person__items-id">
+                                                            <button type="button" aria-label="select row" class="person__items-select"></button>
+                                                            45663
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Service">
+                                                        <div class="person__items-service">
+                                                            Instagram - Reel Views | Start 0 - 1 Hour | Speed: ~500,000 Per Day
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Rate per 1000">
+                                                        <div class="table__price">
+                                                            19.25 ₽
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Min order – Max order">
+                                                        <div class="table__values">
+                                                            <div class="table__values-min">100</div>
+                                                            -
+                                                            <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Details">
+                                                        <a href="#details" data-fancybox class="btn btn-primary">Description</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="ID">
+                                                        <div class="person__items-id">
+                                                            <button type="button" aria-label="select row" class="person__items-select"></button>
+                                                            45663
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Service">
+                                                        <div class="person__items-service">
+                                                            Instagram - Reel Views | Start 0 - 1 Hour | Speed: ~500,000 Per Day
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Rate per 1000">
+                                                        <div class="table__price">
+                                                            19.25 ₽
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Min order – Max order">
+                                                        <div class="table__values">
+                                                            <div class="table__values-min">100</div>
+                                                            -
+                                                            <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Details">
+                                                        <a href="#details" data-fancybox class="btn btn-primary">Description</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="ID">
+                                                        <div class="person__items-id">
+                                                            <button type="button" aria-label="select row" class="person__items-select"></button>
+                                                            45663
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Service">
+                                                        <div class="person__items-service">
+                                                            Instagram - Reel Views | Start 0 - 1 Hour | Speed: ~500,000 Per Day
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Rate per 1000">
+                                                        <div class="table__price">
+                                                            19.25 ₽
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Min order – Max order">
+                                                        <div class="table__values">
+                                                            <div class="table__values-min">100</div>
+                                                            -
+                                                            <div class="table__values-max">100&nbsp;000&nbsp;000</div>
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="Details">
+                                                        <a href="#details" data-fancybox class="btn btn-primary">Description</a>
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+        @@include('html/_modal.html', {})
+        @@include('html/_js.html', {})
+    </body>
+</html>

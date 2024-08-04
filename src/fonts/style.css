@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icons';
-  src:  url('fonts/icons.eot?vg5dm2');
-  src:  url('fonts/icons.eot?vg5dm2#iefix') format('embedded-opentype'),
-    url('fonts/icons.ttf?vg5dm2') format('truetype'),
-    url('fonts/icons.woff?vg5dm2') format('woff'),
-    url('fonts/icons.svg?vg5dm2#icons') format('svg');
+  src:  url('fonts/icons.eot?bzn0qm');
+  src:  url('fonts/icons.eot?bzn0qm#iefix') format('embedded-opentype'),
+    url('fonts/icons.ttf?bzn0qm') format('truetype'),
+    url('fonts/icons.woff?bzn0qm') format('woff'),
+    url('fonts/icons.svg?bzn0qm#icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-butterfly-octagon:before {
+  content: "\e91c";
+}
+.icon-arrow:before {
+  content: "\e919";
+}
+.icon-star:before {
+  content: "\e91a";
+}
+.icon-star-fill:before {
+  content: "\e91b";
+}
 .icon-user:before {
   content: "\e918";
 }

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('html/_head.html', {
+    'title': ''
+    })
+    <body>
+        <div class="canvas">
+            <canvas id="canvas"></canvas>
+        </div>
+        <div class="wrapper">
+            @@include('html/_header-login.html', {
+            "active": 4
+            })
+            <main class="page">
+                <div class="person">
+                    <div class="person__container">
+                        <div class="person__content">
+                            @@include('./html/_sidebar.html', {
+                            "active": 4
+                            })
+                            <div class="person__body">
+                                <h1 class="person__title text-center">Add funds</h1>
+                                <div class="person__funds">
+                                    <form action="#" class="person__form">
+                                        <div class="person__funds-options">
+                                            <label class="person__funds-option">
+                                                <input type="radio" name="fund" checked value="1" class="person__funds-input hidden" hidden>
+                                                <span class="person__funds-btn">
+                                                    <img src="@img/funds/01.png" alt="fund">
+                                                </span>
+                                            </label>
+                                            <label class="person__funds-option">
+                                                <input type="radio" name="fund" value="2" class="person__funds-input hidden" hidden>
+                                                <span class="person__funds-btn">
+                                                    <img src="@img/funds/02.png" alt="fund">
+                                                </span>
+                                            </label>
+                                            <label class="person__funds-option">
+                                                <input type="radio" name="fund" value="3" class="person__funds-input hidden" hidden>
+                                                <span class="person__funds-btn">
+                                                    <img src="@img/funds/03.png" alt="fund">
+                                                </span>
+                                            </label>
+                                            <label class="person__funds-option">
+                                                <input type="radio" name="fund" value="4" class="person__funds-input hidden" hidden>
+                                                <span class="person__funds-btn">
+                                                    <img src="@img/funds/04.png" alt="fund">
+                                                </span>
+                                            </label>
+                                            <label class="person__funds-option">
+                                                <input type="radio" name="fund" value="5" class="person__funds-input hidden" hidden>
+                                                <span class="person__funds-btn">
+                                                    <img src="@img/funds/05.png" alt="fund">
+                                                </span>
+                                            </label>
+                                            <label class="person__funds-option">
+                                                <input type="radio" name="fund" value="6" class="person__funds-input hidden" hidden>
+                                                <span class="person__funds-btn">
+                                                    <img src="@img/funds/06.png" alt="fund">
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="person__field">
+                                            <input type="number" name="sum" class="form__input" placeholder="Сумма">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary btn-lg">Add funds </button>
+                                    </form>
+                                    <div class="person__items-table">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-left">ID</th>
+                                                    <th class="text-left">Дата</th>
+                                                    <th class="text-left">Метод</th>
+                                                    <th>Стоимость</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-left" data-label="ID">45663</td>
+                                                    <td class="text-left" data-label="Дата">
+                                                        <time datetime="2024-07-25 22:42:24" class="person__items-time">
+                                                            2024-07-25 22:42:24
+                                                        </time>
+                                                    </td>
+                                                    <td class="text-left" data-label="Метод">
+                                                        <a href="">Free-kassa</a>
+                                                    </td>
+                                                    <td data-label="Стоимость">
+                                                        500.00
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-left" data-label="ID">45663</td>
+                                                    <td class="text-left" data-label="Дата">
+                                                        <time datetime="2024-07-25 22:42:24" class="person__items-time">
+                                                            2024-07-25 22:42:24
+                                                        </time>
+                                                    </td>
+                                                    <td class="text-left" data-label="Метод">
+                                                        <a href="">AnyPay</a>
+                                                    </td>
+                                                    <td data-label="Стоимость">
+                                                        2500.00
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-left" data-label="ID">45663</td>
+                                                    <td class="text-left" data-label="Дата">
+                                                        <time datetime="2024-07-25 22:42:24" class="person__items-time">
+                                                            2024-07-25 22:42:24
+                                                        </time>
+                                                    </td>
+                                                    <td class="text-left" data-label="Метод">
+                                                        <a href="">USDT (TRC20)</a>
+                                                    </td>
+                                                    <td data-label="Стоимость">
+                                                        500.00
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+        @@include('html/_modal.html', {})
+        @@include('html/_js.html', {})
+    </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('html/_head.html', {
+    'title': ''
+    })
+    <body>
+        <div class="canvas">
+            <canvas id="canvas"></canvas>
+        </div>
+        <div class="wrapper">
+            @@include('html/_header-login.html', {
+            "active": 0
+            })
+            <main class="page">
+                <div class="person">
+                    <div class="person__container">
+                        <div class="person__content">
+                            @@include('./html/_sidebar.html', {
+                            "active": 0
+                            })
+                            <div class="person__body">
+                                <h1 class="person__title">
+                                    <a href="" class="person__back icon-arrow"></a>
+                                    Cверкнула серебром в свете настольной лампы...
+                                </h1>
+                                <div class="person__chat">
+                                    <div class="person__message">
+                                        <div class="person__message-header">
+                                            <div class="person__message-name icon-user-octagon online">Username</div>
+                                            <time datetime="2024-07-25 21:55:19" class="person__message-time">2024-07-25 21:55:19</time>
+                                        </div>
+                                        <div class="person__message-body">
+                                            Таким образом, реализация намеченного плана развития в значительной степени обуславливает создание модели развития. Соображения высшего порядка, а также начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации новых предложений? Практический опыт показывает, что рамки и место обучения кадров позволяет выполнить важнейшие задания по разработке форм воздействия.
+                                        </div>
+                                    </div>
+                                    <div class="person__message _input">
+                                        <div class="person__message-header">
+                                            <div class="person__message-name icon-butterfly-octagon">SMM3</div>
+                                            <time datetime="2024-07-25 21:55:19" class="person__message-time">2024-07-25 21:55:19</time>
+                                        </div>
+                                        <div class="person__message-body">
+                                            Таким образом, реализация намеченного плана развития в значительной степени обуславливает создание модели развития.
+                                        </div>
+                                    </div>
+                                    <form action="#" class="person__chat-form">
+                                        <div class="person__field">
+                                            <div class="person__caption">
+                                                Сообщение
+                                            </div>
+                                            <textarea name="" class="form__textarea form__textarea-sm"></textarea>
+                                        </div>
+                                        <div class="person__field">
+                                            <label class="form__file">
+                                                <input type="file" name="attach" class="form__file-input hidden" hidden>
+                                                <span class="form__file-field icon-attach">
+                                                    Прикрепить файлы
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary btn-lg">SUBMIT</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+        @@include('html/_modal.html', {})
+        @@include('html/_js.html', {})
+    </body>
+</html>

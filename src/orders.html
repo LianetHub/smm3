@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('html/_head.html', {
+    'title': ''
+    })
+    <body>
+        <div class="canvas">
+            <canvas id="canvas"></canvas>
+        </div>
+        <div class="wrapper">
+            @@include('html/_header-login.html', {
+            "active": 2
+            })
+            <main class="page">
+                <div class="person">
+                    <div class="person__container">
+                        <div class="person__wrapper">
+                            @@include('./html/_sidebar.html', {
+                            "active": 2
+                            })
+                            <div class="person__body">
+                                <div class="person__body-main">
+                                    <h1 class="person__title">My Orders</h1>
+                                    <div class="person__items">
+                                        <div class="person__items-header">
+                                            <div class="person__items-options">
+                                                <label class="option">
+                                                    <input type="radio" name="filter" value="all" checked class="option__input hidden" hidden>
+                                                    <span class="option__btn">Все</span>
+                                                </label>
+                                                <label class="option">
+                                                    <input type="radio" name="filter" value="waiting" class="option__input hidden" hidden>
+                                                    <span class="option__btn">Ожидает</span>
+                                                </label>
+                                                <label class="option">
+                                                    <input type="radio" name="filter" value="performed" class="option__input hidden" hidden>
+                                                    <span class="option__btn">Выполняется</span>
+                                                </label>
+                                                <label class="option">
+                                                    <input type="radio" name="filter" value="completed" class="option__input hidden" hidden>
+                                                    <span class="option__btn">Выполнен</span>
+                                                </label>
+                                                <label class="option">
+                                                    <input type="radio" name="filter" value="partially-completed" class="option__input hidden" hidden>
+                                                    <span class="option__btn">Частично выполнен</span>
+                                                </label>
+                                                <label class="option">
+                                                    <input type="radio" name="filter" value="processing" class="option__input hidden" hidden>
+                                                    <span class="option__btn">Обрабатывается</span>
+                                                </label>
+                                                <label class="option">
+                                                    <input type="radio" name="filter" value="canceled" class="option__input hidden" hidden>
+                                                    <span class="option__btn">Отменен</span>
+                                                </label>
+                                            </div>
+                                            <form action="#" class="person__items-form">
+                                                <div class="person__field icon-search">
+                                                    <input type="text" name="search" class="form__input" placeholder="Поиск">
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="person__items-table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th class="text-left">ID</th>
+                                                <th class="text-left">Дата</th>
+                                                <th class="text-left">Ссылка</th>
+                                                <th>Стоимость</th>
+                                                <th>Start count</th>
+                                                <th>Количество</th>
+                                                <th>Услуга</th>
+                                                <th>Статус</th>
+                                                <th>Остаток</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td data-label="ID">1</td>
+                                                <td data-label="Дата"><time datetime="2024-07-26 10:45" class="person__items-time">26.07.2024 10:45</time></td>
+                                                <td data-label="Ссылка"><a href="https://smm3.ru/orders">https://smm3.ru/orders</a></td>
+                                                <td data-label="Стоимость">50 ₽</td>
+                                                <td data-label="Start count">0</td>
+                                                <td data-label="Количество">50000</td>
+                                                <td data-label="Услуга">
+                                                    <div data-tooltip="gray" title="🚩Premium Members Telegram + View - 30-60 Days Premium Members - Read The Description - 0-1Hr - Speed : 📍Fast - 30-60 Days Non Drop - 30 Days Refill - Stable price ⛔ 👑 🔥 - 1122.02 ₽ за 1000" class="person__items-name">
+                                                        🚩Premium Members Telegram + View - 30-60 Days Premium Members - Read The Description - 0-1Hr - Speed : 📍Fast - 30-60 Days Non Drop - 30 Days Refill - Stable price ⛔ 👑 🔥 - 1122.02 ₽ за 1000
+                                                    </div>
+                                                </td>
+                                                <td data-label="Статус">
+                                                    <div class="person__items-status completed">
+                                                        Выполнен
+                                                    </div>
+                                                </td>
+                                                <td data-label="Остаток">450 ₽</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="ID">2</td>
+                                                <td data-label="Дата"><time datetime="2024-07-26 10:45" class="person__items-time">26.07.2024 10:45</time></td>
+                                                <td data-label="Ссылка"><a href="https://smm3.ru/orders">https://smm3.ru/orders</a></td>
+                                                <td data-label="Стоимость">50 ₽</td>
+                                                <td data-label="Start count">0</td>
+                                                <td data-label="Количество">50000</td>
+                                                <td data-label="Услуга">
+                                                    <div data-tooltip="gray" title="🚩Premium Members Telegram + View - 30-60 Days Premium Members - Read The Description - 0-1Hr - Speed : 📍Fast - 30-60 Days Non Drop - 30 Days Refill - Stable price ⛔ 👑 🔥 - 1122.02 ₽ за 1000" class="person__items-name">
+                                                        🚩Premium Members Telegram + View - 30-60 Days Premium Members - Read The Description - 0-1Hr - Speed : 📍Fast - 30-60 Days Non Drop - 30 Days Refill - Stable price ⛔ 👑 🔥 - 1122.02 ₽ за 1000
+                                                    </div>
+                                                </td>
+                                                <td data-label="Статус">
+                                                    <div class="person__items-status waiting">
+                                                        Ожидает
+                                                    </div>
+                                                </td>
+                                                <td data-label="Остаток">450 ₽</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="ID">3</td>
+                                                <td data-label="Дата"><time datetime="2024-07-26 10:45" class="person__items-time">26.07.2024 10:45</time></td>
+                                                <td data-label="Ссылка"><a href="https://smm3.ru/orders">https://smm3.ru/orders</a></td>
+                                                <td data-label="Стоимость">50 ₽</td>
+                                                <td data-label="Start count">0</td>
+                                                <td data-label="Количество">50000</td>
+                                                <td data-label="Услуга">
+                                                    <div data-tooltip="gray" title="🚩Premium Members Telegram + View - 30-60 Days Premium Members - Read The Description - 0-1Hr - Speed : 📍Fast - 30-60 Days Non Drop - 30 Days Refill - Stable price ⛔ 👑 🔥 - 1122.02 ₽ за 1000" class="person__items-name">
+                                                        🚩Premium Members Telegram + View - 30-60 Days Premium Members - Read The Description - 0-1Hr - Speed : 📍Fast - 30-60 Days Non Drop - 30 Days Refill - Stable price ⛔ 👑 🔥 - 1122.02 ₽ за 1000
+                                                    </div>
+                                                </td>
+                                                <td data-label="Статус">
+                                                    <div class="person__items-status performed">
+                                                        Выполняется
+                                                    </div>
+                                                </td>
+                                                <td data-label="Остаток">450 ₽</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="ID">4</td>
+                                                <td data-label="Дата"><time datetime="2024-07-26 10:45" class="person__items-time">26.07.2024 10:45</time></td>
+                                                <td data-label="Ссылка"><a href="https://smm3.ru/orders">https://smm3.ru/orders</a></td>
+                                                <td data-label="Стоимость">50 ₽</td>
+                                                <td data-label="Start count">0</td>
+                                                <td data-label="Количество">50000</td>
+                                                <td data-label="Услуга">
+                                                    <div data-tooltip="gray" title="🚩Premium Members Telegram + View - 30-60 Days Premium Members - Read The Description - 0-1Hr - Speed : 📍Fast - 30-60 Days Non Drop - 30 Days Refill - Stable price ⛔ 👑 🔥 - 1122.02 ₽ за 1000" class="person__items-name">
+                                                        🚩Premium Members Telegram + View - 30-60 Days Premium Members - Read The Description - 0-1Hr - Speed : 📍Fast - 30-60 Days Non Drop - 30 Days Refill - Stable price ⛔ 👑 🔥 - 1122.02 ₽ за 1000
+                                                    </div>
+                                                </td>
+                                                <td data-label="Статус">
+                                                    <div class="person__items-status part">
+                                                        Частично выполнен
+                                                    </div>
+                                                </td>
+                                                <td data-label="Остаток">450 ₽</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="ID">5</td>
+                                                <td data-label="Дата"><time datetime="2024-07-26 10:45" class="person__items-time">26.07.2024 10:45</time></td>
+                                                <td data-label="Ссылка"><a href="https://smm3.ru/orders">https://smm3.ru/orders</a></td>
+                                                <td data-label="Стоимость">50 ₽</td>
+                                                <td data-label="Start count">0</td>
+                                                <td data-label="Количество">50000</td>
+                                                <td data-label="Услуга">
+                                                    <div data-tooltip="gray" title="🚩Premium Members Telegram + View - 30-60 Days Premium Members - Read The Description - 0-1Hr - Speed : 📍Fast - 30-60 Days Non Drop - 30 Days Refill - Stable price ⛔ 👑 🔥 - 1122.02 ₽ за 1000" class="person__items-name">
+                                                        🚩Premium Members Telegram + View - 30-60 Days Premium Members - Read The Description - 0-1Hr - Speed : 📍Fast - 30-60 Days Non Drop - 30 Days Refill - Stable price ⛔ 👑 🔥 - 1122.02 ₽ за 1000
+                                                    </div>
+                                                </td>
+                                                <td data-label="Статус">
+                                                    <div class="person__items-status processing">
+                                                        Обрабатывается
+                                                    </div>
+                                                </td>
+                                                <td data-label="Остаток">450 ₽</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="ID">6</td>
+                                                <td data-label="Дата"><time datetime="2024-07-26 10:45" class="person__items-time">26.07.2024 10:45</time></td>
+                                                <td data-label="Ссылка"><a href="https://smm3.ru/orders">https://smm3.ru/orders</a></td>
+                                                <td data-label="Стоимость">50 ₽</td>
+                                                <td data-label="Start count">0</td>
+                                                <td data-label="Количество">50000</td>
+                                                <td data-label="Услуга">
+                                                    <div data-tooltip="gray" title="🚩Premium Members Telegram + View - 30-60 Days Premium Members - Read The Description - 0-1Hr - Speed : 📍Fast - 30-60 Days Non Drop - 30 Days Refill - Stable price ⛔ 👑 🔥 - 1122.02 ₽ за 1000" class="person__items-name">
+                                                        🚩Premium Members Telegram + View - 30-60 Days Premium Members - Read The Description - 0-1Hr - Speed : 📍Fast - 30-60 Days Non Drop - 30 Days Refill - Stable price ⛔ 👑 🔥 - 1122.02 ₽ за 1000
+                                                    </div>
+                                                </td>
+                                                <td data-label="Статус">
+                                                    <div class="person__items-status canceled">
+                                                        Отменен
+                                                    </div>
+                                                </td>
+                                                <td data-label="Остаток">450 ₽</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="ID">7</td>
+                                                <td data-label="Дата"><time datetime="2024-07-26 10:45" class="person__items-time">26.07.2024 10:45</time></td>
+                                                <td data-label="Ссылка"><a href="https://smm3.ru/orders">https://smm3.ru/orders</a></td>
+                                                <td data-label="Стоимость">50 ₽</td>
+                                                <td data-label="Start count">0</td>
+                                                <td data-label="Количество">50000</td>
+                                                <td data-label="Услуга">
+                                                    <div data-tooltip="gray" title="🚩Premium Members Telegram + View - 30-60 Days Premium Members - Read The Description - 0-1Hr - Speed : 📍Fast - 30-60 Days Non Drop - 30 Days Refill - Stable price ⛔ 👑 🔥 - 1122.02 ₽ за 1000" class="person__items-name">
+                                                        🚩Premium Members Telegram + View - 30-60 Days Premium Members - Read The Description - 0-1Hr - Speed : 📍Fast - 30-60 Days Non Drop - 30 Days Refill - Stable price ⛔ 👑 🔥 - 1122.02 ₽ за 1000
+                                                    </div>
+                                                </td>
+                                                <td data-label="Статус">
+                                                    <div class="person__items-status performed">
+                                                        Выполняется
+                                                    </div>
+                                                </td>
+                                                <td data-label="Остаток">450 ₽</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="ID">8</td>
+                                                <td data-label="Дата"><time datetime="2024-07-26 10:45" class="person__items-time">26.07.2024 10:45</time></td>
+                                                <td data-label="Ссылка"><a href="https://smm3.ru/orders">https://smm3.ru/orders</a></td>
+                                                <td data-label="Стоимость">50 ₽</td>
+                                                <td data-label="Start count">0</td>
+                                                <td data-label="Количество">50000</td>
+                                                <td data-label="Услуга">
+                                                    <div data-tooltip="gray" title="🚩Premium Members Telegram + View - 30-60 Days Premium Members - Read The Description - 0-1Hr - Speed : 📍Fast - 30-60 Days Non Drop - 30 Days Refill - Stable price ⛔ 👑 🔥 - 1122.02 ₽ за 1000" class="person__items-name">
+                                                        🚩Premium Members Telegram + View - 30-60 Days Premium Members - Read The Description - 0-1Hr - Speed : 📍Fast - 30-60 Days Non Drop - 30 Days Refill - Stable price ⛔ 👑 🔥 - 1122.02 ₽ за 1000
+                                                    </div>
+                                                </td>
+                                                <td data-label="Статус">
+                                                    <div class="person__items-status performed">
+                                                        Выполняется
+                                                    </div>
+                                                </td>
+                                                <td data-label="Остаток">450 ₽</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="ID">9</td>
+                                                <td data-label="Дата"><time datetime="2024-07-26 10:45" class="person__items-time">26.07.2024 10:45</time></td>
+                                                <td data-label="Ссылка"><a href="https://smm3.ru/orders">https://smm3.ru/orders</a></td>
+                                                <td data-label="Стоимость">50 ₽</td>
+                                                <td data-label="Start count">0</td>
+                                                <td data-label="Количество">50000</td>
+                                                <td data-label="Услуга">
+                                                    <div data-tooltip="gray" title="🚩Premium Members Telegram + View - 30-60 Days Premium Members - Read The Description - 0-1Hr - Speed : 📍Fast - 30-60 Days Non Drop - 30 Days Refill - Stable price ⛔ 👑 🔥 - 1122.02 ₽ за 1000" class="person__items-name">
+                                                        🚩Premium Members Telegram + View - 30-60 Days Premium Members - Read The Description - 0-1Hr - Speed : 📍Fast - 30-60 Days Non Drop - 30 Days Refill - Stable price ⛔ 👑 🔥 - 1122.02 ₽ за 1000
+                                                    </div>
+                                                </td>
+                                                <td data-label="Статус">
+                                                    <div class="person__items-status performed">
+                                                        Выполняется
+                                                    </div>
+                                                </td>
+                                                <td data-label="Остаток">450 ₽</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="ID">10</td>
+                                                <td data-label="Дата"><time datetime="2024-07-26 10:45" class="person__items-time">26.07.2024 10:45</time></td>
+                                                <td data-label="Ссылка"><a href="https://smm3.ru/orders">https://smm3.ru/orders</a></td>
+                                                <td data-label="Стоимость">50 ₽</td>
+                                                <td data-label="Start count">0</td>
+                                                <td data-label="Количество">50000</td>
+                                                <td data-label="Услуга">
+                                                    <div data-tooltip="gray" title="🚩Premium Members Telegram + View - 30-60 Days Premium Members - Read The Description - 0-1Hr - Speed : 📍Fast - 30-60 Days Non Drop - 30 Days Refill - Stable price ⛔ 👑 🔥 - 1122.02 ₽ за 1000" class="person__items-name">
+                                                        🚩Premium Members Telegram + View - 30-60 Days Premium Members - Read The Description - 0-1Hr - Speed : 📍Fast - 30-60 Days Non Drop - 30 Days Refill - Stable price ⛔ 👑 🔥 - 1122.02 ₽ за 1000
+                                                    </div>
+                                                </td>
+                                                <td data-label="Статус">
+                                                    <div class="person__items-status performed">
+                                                        Выполняется
+                                                    </div>
+                                                </td>
+                                                <td data-label="Остаток">450 ₽</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="ID">11</td>
+                                                <td data-label="Дата"><time datetime="2024-07-26 10:45" class="person__items-time">26.07.2024 10:45</time></td>
+                                                <td data-label="Ссылка"><a href="https://smm3.ru/orders">https://smm3.ru/orders</a></td>
+                                                <td data-label="Стоимость">50 ₽</td>
+                                                <td data-label="Start count">0</td>
+                                                <td data-label="Количество">50000</td>
+                                                <td data-label="Услуга">
+                                                    <div data-tooltip="gray" title="🚩Premium Members Telegram + View - 30-60 Days Premium Members - Read The Description - 0-1Hr - Speed : 📍Fast - 30-60 Days Non Drop - 30 Days Refill - Stable price ⛔ 👑 🔥 - 1122.02 ₽ за 1000" class="person__items-name">
+                                                        🚩Premium Members Telegram + View - 30-60 Days Premium Members - Read The Description - 0-1Hr - Speed : 📍Fast - 30-60 Days Non Drop - 30 Days Refill - Stable price ⛔ 👑 🔥 - 1122.02 ₽ за 1000
+                                                    </div>
+                                                </td>
+                                                <td data-label="Статус">
+                                                    <div class="person__items-status performed">
+                                                        Выполняется
+                                                    </div>
+                                                </td>
+                                                <td data-label="Остаток">450 ₽</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="ID">12</td>
+                                                <td data-label="Дата"><time datetime="2024-07-26 10:45" class="person__items-time">26.07.2024 10:45</time></td>
+                                                <td data-label="Ссылка"><a href="https://smm3.ru/orders">https://smm3.ru/orders</a></td>
+                                                <td data-label="Стоимость">50 ₽</td>
+                                                <td data-label="Start count">0</td>
+                                                <td data-label="Количество">50000</td>
+                                                <td data-label="Услуга">
+                                                    <div data-tooltip="gray" title="🚩Premium Members Telegram + View - 30-60 Days Premium Members - Read The Description - 0-1Hr - Speed : 📍Fast - 30-60 Days Non Drop - 30 Days Refill - Stable price ⛔ 👑 🔥 - 1122.02 ₽ за 1000" class="person__items-name">
+                                                        🚩Premium Members Telegram + View - 30-60 Days Premium Members - Read The Description - 0-1Hr - Speed : 📍Fast - 30-60 Days Non Drop - 30 Days Refill - Stable price ⛔ 👑 🔥 - 1122.02 ₽ за 1000
+                                                    </div>
+                                                </td>
+                                                <td data-label="Статус">
+                                                    <div class="person__items-status performed">
+                                                        Выполняется
+                                                    </div>
+                                                </td>
+                                                <td data-label="Остаток">450 ₽</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+        @@include('html/_modal.html', {})
+        @@include('html/_js.html', {})
+    </body>
+</html>

@@ -16,7 +16,21 @@
 	pointer-events: none;
 	user-select: none;
 	text-align: center;
-
+	cursor: help;
+	&.gray {
+		background: #322930;
+		text-align: left;
+		&.open-top {
+			&::after {
+				border-top: rem(5) solid #322930;
+			}
+		}
+		&.open-bottom {
+			&::after {
+				border-bottom: rem(5) solid #322930;
+			}
+		}
+	}
 	&.open-top {
 		transform: translateY(-0.41rem);
 		&::after {

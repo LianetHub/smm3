@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" itemprop="description" content="описание страницы">
+	<meta name="keywords" itemprop="keywords" content="ключевые слова">
+	<!-- favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="theme-color" content="#ffffff">
+	<!-- favicon -->
+	<!-- Open Graph  -->
+	<meta property="og:type" content="business.business">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="627">
+	<meta property="og:site_name" content="">
+	<meta property="og:locale" content="en_EN">
+	<!-- Open Graph  -->
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:title" content="">
+	<meta property="twitter:description" content="">
+	<meta property="twitter:site" content="">
+	<meta property="twitter:url" content="">
+	<meta property="twitter:image:src" content="">
+	<!-- Twitter -->
+	<!-- plugnis -->
+	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240805000905">
+	<link rel="stylesheet" href="css/libs/fancybox.css?_v=20240805000905">
+	<!-- plugnis -->
+	<link rel="stylesheet" href="css/reset.min.css?_v=20240805000905">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240805000905">
+</head>
+
+<body>
+	<div class="canvas">
+		<canvas id="canvas"></canvas>
+	</div>
+	<div class="wrapper">
+		<header class="header header-logined">
+			<div class="header__container">
+				<a href="/" class="header__logo">
+					<span class="header__logo-icon">
+						<picture>
+							<source srcset="img/butterfly.webp" type="image/webp"><img src="img/butterfly.png" alt="logo icon">
+						</picture>
+					</span> Smm3 </a>
+				<div class="header__wallet dropdown dropdown-accent">
+					<button type="button" class="dropdown__button icon-chevron" aria-expanded="false" aria-haspopup="true"> 500 ₽ </button>
+					<div class="dropdown__content" aria-hidden="true">
+						<ul class="dropdown__list" role="listbox">
+							<li role="option" data-value="500 ₽" aria-checked="true" class="dropdown__list-item">500 ₽</li>
+							<li role="option" data-value="1000 ₽" class="dropdown__list-item">1000 ₽</li>
+						</ul>
+						<input type="text" name="wallet" id="wallet" class="dropdown__input hidden" hidden="" value="500 ₽">
+					</div>
+				</div>
+				<div class="header__menu menu">
+					<a href="/user.html" class="menu__btn icon-user btn btn-primary"></a>
+					<div class="menu__person mobile-only">
+						<nav class="person__sidebar-nav" aria-label="person menu">
+							<ul class="person__sidebar-list">
+								<li class="person__sidebar-item">
+									<a href="/order.html" class="person__sidebar-link icon-bag">New order</a>
+								</li>
+								<li class="person__sidebar-item">
+									<a href="/orders.html" class="person__sidebar-link icon-bag-happy">Orders <span>6</span></a>
+								</li>
+								<li class="person__sidebar-item">
+									<a href="/person-services.html" class="person__sidebar-link icon-category">Services</a>
+								</li>
+								<li class="person__sidebar-item">
+									<a href="/add-funds.html" class="person__sidebar-link icon-wallet-money">Add funds</a>
+								</li>
+								<li class="person__sidebar-item">
+									<a href="/affiliates.html" class="person__sidebar-link icon-users active">Affiliates</a>
+								</li>
+								<li class="person__sidebar-item">
+									<a href="/mass-order.html" class="person__sidebar-link icon-shopping-cart">Mass order</a>
+								</li>
+								<li class="person__sidebar-item">
+									<a href="/child-panel.html" class="person__sidebar-link icon-global">Child panel</a>
+								</li>
+								<li class="person__sidebar-item">
+									<a href="/api.html" class="person__sidebar-link icon-connection ">API</a>
+								</li>
+							</ul>
+						</nav>
+						<a href="/support.html" class="person__support">
+							<span class="person__support-header">
+								<span class="person__support-main">
+									<span class="person__support-title">Support 24/7</span>
+									<span class="person__support-subtitle">Contacts us anytime</span>
+								</span>
+								<span class="person__support-notify">
+									<img src="img/sms-notification.svg" alt="icon">
+									<span class="person__support-quantity">2</span>
+								</span>
+							</span>
+							<span class="person__support-btn">Chat</span>
+						</a>
+					</div>
+					<div class="menu__bottom">
+						<div class="header__select dropdown">
+							<button type="button" class="dropdown__button icon-chevron" aria-expanded="false" aria-haspopup="true"> ENG </button>
+							<div class="dropdown__content" aria-hidden="true">
+								<ul class="dropdown__list" role="listbox">
+									<li role="option" data-value="ENG" aria-checked="true" class="dropdown__list-item">ENG</li>
+									<li role="option" data-value="RUS" class="dropdown__list-item">RUS</li>
+								</ul>
+								<input type="text" name="lang" id="lang" class="dropdown__input hidden" hidden="" value="ENG">
+							</div>
+						</div>
+						<div class="menu__actions">
+							<a href="/signup.html" class="menu__action btn btn-danger">Log out</a>
+						</div>
+					</div>
+				</div>
+				<button type="button" aria-label="Open mobile menu" class="menu__icon icon-menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+		</header>
+		<nav aria-label="bottom menu" class="bottom-menu">
+			<ul class="bottom-menu__list">
+				<li class="bottom-menu__item">
+					<a href="/order.html" class="bottom-menu__link icon-bag">New order </a>
+				</li>
+				<li class="bottom-menu__item">
+					<a href="/orders.html" class="bottom-menu__link icon-bag-happy">Orders</a>
+				</li>
+				<li class="bottom-menu__item">
+					<a href="/add-funds.html" class="bottom-menu__link icon-wallet-money">Add funds</a>
+				</li>
+				<li class="bottom-menu__item">
+					<a href="" class="bottom-menu__link">
+						<img src="img/sms-notification.svg" alt="icon"> Tikets </a>
+				</li>
+				<li class="bottom-menu__item">
+					<a href="/services.html" class="bottom-menu__link icon-category">Services</a>
+				</li>
+			</ul>
+		</nav>
+		<main class="page">
+			<div class="person">
+				<div class="person__container">
+					<div class="person__wrapper">
+						<aside class="person__sidebar">
+							<div class="person__sidebar-header ">
+								<a href="/user.html" class="person__sidebar-user icon-user-octagon online"> Username </a>
+								<a href="" class="person__sidebar-settings icon-setting"></a>
+							</div>
+							<nav class="person__sidebar-nav pc-only" aria-label="person menu">
+								<ul class="person__sidebar-list">
+									<li class="person__sidebar-item">
+										<a href="/order.html" class="person__sidebar-link icon-bag">New order</a>
+									</li>
+									<li class="person__sidebar-item">
+										<a href="/orders.html" class="person__sidebar-link icon-bag-happy">Orders <span>6</span></a>
+									</li>
+									<li class="person__sidebar-item">
+										<a href="/person-services.html" class="person__sidebar-link icon-category">Services</a>
+									</li>
+									<li class="person__sidebar-item">
+										<a href="/add-funds.html" class="person__sidebar-link icon-wallet-money">Add funds</a>
+									</li>
+									<li class="person__sidebar-item">
+										<a href="/affiliates.html" class="person__sidebar-link icon-users active">Affiliates</a>
+									</li>
+									<li class="person__sidebar-item">
+										<a href="/mass-order.html" class="person__sidebar-link icon-shopping-cart">Mass order</a>
+									</li>
+									<li class="person__sidebar-item">
+										<a href="/child-panel.html" class="person__sidebar-link icon-global">Child panel</a>
+									</li>
+									<li class="person__sidebar-item">
+										<a href="/api.html" class="person__sidebar-link icon-connection">API</a>
+									</li>
+								</ul>
+							</nav>
+							<a href="/support.html" class="person__support pc-only">
+								<span class="person__support-header">
+									<span class="person__support-main">
+										<span class="person__support-title">Support 24/7</span>
+										<span class="person__support-subtitle">Contacts us anytime</span>
+									</span>
+									<span class="person__support-notify">
+										<img src="img/sms-notification.svg" alt="icon">
+										<span class="person__support-quantity">2</span>
+									</span>
+								</span>
+								<span class="person__support-btn">Chat</span>
+							</a>
+						</aside>
+						<div class="person__body">
+							<div class="person__body-main">
+								<h1 class="person__title">Affiliates</h1>
+								<ul class="person__affiliates">
+									<li class="person__affiliates-block">
+										<div class="person__affiliates-header icon-ref-link"> Referral link </div>
+										<div class="person__affiliates-body">
+											<a href="https://smm3.ru/ref/2sslp">https://smm3.ru/ref/2sslp</a>
+											<button type="button" aria-label="copy btn" class="btn-copy icon-copy"></button>
+										</div>
+									</li>
+									<li class="person__affiliates-block">
+										<div class="person__affiliates-header">
+											<span class="person__affiliates-icon">%</span> Commission rate
+										</div>
+										<div class="person__affiliates-body"> 3% </div>
+									</li>
+									<li class="person__affiliates-block">
+										<div class="person__affiliates-header icon-money"> Minimum payout </div>
+										<div class="person__affiliates-body"> 1000.00 ₽ </div>
+									</li>
+								</ul>
+							</div>
+							<div class="person__items-table">
+								<table>
+									<thead>
+										<tr>
+											<th class="text-left">Visits</th>
+											<th>Registrations</th>
+											<th>Referrals</th>
+											<th>Conversion rate</th>
+											<th>Total earnings</th>
+											<th>Available earnings</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="text-left" data-label="Visits">97</td>
+											<td data-label="Registrations">10</td>
+											<td data-label="Referrals">2</td>
+											<td data-label="Conversion rate">
+												<div class="person__items-label"> 2.06% </div>
+											</td>
+											<td data-label="Total earnings"><strong>50.00 ₽</strong></td>
+											<td data-label="Available earnings"><strong class="color-green">50.00 ₽</strong></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container"> smm3.ru © 2024 All Rights Reserved. </div>
+		</footer>
+	</div>
+	<div id="details" class="popup">
+		<button type="button" data-fancybox-close="" aria-label="close modal" class="popup__close icon-close"></button>
+		<div class="popup__header">
+			<div class="popup__header-num">5382</div>
+			<div class="popup__header-name">Instagram - Reel Views | Start 0 - 1 Hour | Speed: ~500,000 Per Day</div>
+		</div>
+		<div class="popup__content">
+			<div class="popup__desc"> Quality: Real <br> Speed: 20-50K/D <br> Refill: 365 Days Refill <br> Link: Username <br> <br> Start Time: Instant <br> 📍 provider : our platforms <br> 📌 This is our exclusive service, if the service encounters a problem, just inform the support so that the problem can be solved completely <br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br> ~recommended~<wbr>bestseller~<wbr>updated~<wbr>instant~<wbr>fast~<wbr>favorite <br> <br> <br> Quality: Real <br> Speed: 20-50K/D <br> Refill: 365 Days Refill <br> Link: Username <br> <br> Start Time: Instant <br> 📍 provider : our platforms <br> 📌 This is our exclusive service, if the service encounters a problem, just inform the support so that the problem can be solved completely <br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br> ~recommended~<wbr>bestseller~<wbr>updated~<wbr>instant~<wbr>fast~<wbr>favorite <br> <br> <br> Quality: Real <br> Speed: 20-50K/D <br> Refill: 365 Days Refill <br> Link: Username <br> <br> Start Time: Instant <br> 📍 provider : our platforms <br> 📌 This is our exclusive service, if the service encounters a problem, just inform the support so that the problem can be solved completely <br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br> ~recommended~<wbr>bestseller~<wbr>updated~<wbr>instant~<wbr>fast~<wbr>favorite
+			</div>
+		</div>
+		<a href="" class="popup__btn btn btn-primary btn-lg">Create order</a>
+	</div> <!-- plugnis -->
+	<script src="js/libs/swiper-bundle.min.js?_v=20240805000905"></script>
+	<script src="js/libs/fancybox.umd.js?_v=20240805000905"></script>
+	<script src="js/libs/webgl.js?_v=20240805000905"></script>
+	<!-- plugnis -->
+	<script src="js/app.min.js?_v=20240805000905"></script>
+</body>
+
+</html>

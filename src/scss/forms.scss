@@ -242,9 +242,54 @@
 			font-size: 1rem;
 		}
 	}
+	&:hover,
+	&:active {
+		text-decoration: none !important;
+	}
+
 	&:disabled,
 	&[aria-disabled="true"] {
 		cursor: default;
 		pointer-events: none;
+	}
+}
+
+.option {
+	display: block;
+
+	// .option__input
+	&__input {
+		&:checked {
+			& + .option__btn {
+				background: $accent;
+				border-color: $accent;
+				color: #fff;
+			}
+		}
+	}
+	// .option__btn
+	&__btn {
+		border-radius: 0.3125rem;
+		border: rem(1) solid #575056;
+		backdrop-filter: blur(rem(21));
+		display: block;
+		-webkit-backdrop-filter: blur(rem(21));
+
+		font-size: 0.75rem;
+		font-weight: 600;
+		user-select: none;
+		cursor: pointer;
+		transition: background-color 0.3s ease 0s, border-color 0.3s ease 0s, color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				background: $accent;
+				border-color: $accent;
+				color: #fff;
+			}
+		}
+		padding: 0.35rem 0.56rem;
+		@media (min-width: $md5) {
+			padding: 0.5rem 1.56rem;
+		}
 	}
 }

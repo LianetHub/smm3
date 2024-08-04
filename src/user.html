@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('html/_head.html', {
+    'title': ''
+    })
+    <body>
+        <div class="canvas">
+            <canvas id="canvas"></canvas>
+        </div>
+        <div class="wrapper">
+            @@include('html/_header-login.html', {
+            "active": 10
+            })
+            <main class="page">
+                <div class="person">
+                    <div class="person__container">
+                        <div class="person__content">
+                            @@include('./html/_sidebar.html', {
+                            "active": 10
+                            })
+                            <div class="person__body">
+                                <h1 class="person__title">Account</h1>
+                                <div class="person__columns sm-gap">
+                                    <div class="person__column">
+                                        <form action="#" class="person__form">
+                                            <h2 class="person__form-title color-green">Base</h2>
+                                            <div class="person__field">
+                                                <div class="person__caption">Username</div>
+                                                <input type="text" name="username" class="form__input" value="Username">
+                                            </div>
+                                            <div class="person__field">
+                                                <div class="person__caption">Username</div>
+                                                <input type="email" name="email" class="form__input" value="ahl@yandex.ru">
+                                            </div>
+                                            <button type="submit" class="btn btn-primary btn-lg">Change email</button>
+                                        </form>
+                                        <form action="#" class="person__form">
+                                            <h2 class="person__form-title color-green">Language</h2>
+                                            <div class="person__field">
+                                                <div class="person__caption">Language</div>
+                                                <div class="person__select dropdown">
+                                                    <button type="button" class="dropdown__button icon-chevron" aria-expanded="false" aria-haspopup="true">
+                                                        English
+                                                    </button>
+                                                    <div class="dropdown__content" aria-hidden="true">
+                                                        <ul class="dropdown__list" role="listbox">
+                                                            <li role="option" data-value="English" aria-checked="true" class="dropdown__list-item">English</li>
+                                                            <li role="option" data-value="Russian" class="dropdown__list-item">Russian</li>
+                                                        </ul>
+                                                        <input type="text" name="language" id="language" class="dropdown__input hidden" hidden value="English">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="person__field">
+                                                <div class="person__caption">Timezone</div>
+                                                <div class="person__select dropdown">
+                                                    <button type="button" class="dropdown__button icon-chevron" aria-expanded="false" aria-haspopup="true">
+                                                        (UTC +2:00) Central Africa Time, Eastern European Time, Kaliningrad Time
+                                                    </button>
+                                                    <div class="dropdown__content" aria-hidden="true">
+                                                        <ul class="dropdown__list" role="listbox">
+                                                            <li role="option" data-value="(UTC +2:00) Central Africa Time, Eastern European Time, Kaliningrad Time" aria-checked="true" class="dropdown__list-item">(UTC +2:00) Central Africa Time, Eastern European Time, Kaliningrad Time</li>
+                                                            <li role="option" data-value="(UTC +3:00) Russia" class="dropdown__list-item">(UTC +3:00) Russia</li>
+                                                        </ul>
+                                                        <input type="text" name="timezone" id="timezone" class="dropdown__input hidden" hidden value="(UTC +3:00) Russia">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary btn-lg">save</button>
+                                        </form>
+                                        <form action="#" class="person__form">
+                                            <h2 class="person__form-title color-green">Two-factor authentication</h2>
+                                            <p class="person__form-subtitle">
+                                                Email-based option to add an extra layer of protection to your account. When signing in you’ll need to enter a code that will be sent to your email address.
+                                            </p>
+                                            <button type="submit" class="btn btn-primary btn-lg">Enable</button>
+                                        </form>
+                                        <form action="#" class="person__form">
+                                            <h2 class="person__form-title color-green">API key</h2>
+                                            <div class="person__field">
+                                                <div class="person__caption">Created: 2024-07-26 11:57:05</div>
+                                                <input type="text" name="api" class="form__input" value="********************************">
+                                            </div>
+                                            <button type="submit" class="btn btn-primary btn-lg">Generate new</button>
+                                        </form>
+                                    </div>
+                                    <div class="person__column">
+                                        <form action="#" class="person__form">
+                                            <h2 class="person__form-title color-green">Password</h2>
+                                            <div class="person__field">
+                                                <div class="person__caption">Current password</div>
+                                                <input type="password" name="psw" class="form__input">
+                                            </div>
+                                            <div class="person__field">
+                                                <div class="person__caption">New password</div>
+                                                <input type="password" name="new" class="form__input">
+                                            </div>
+                                            <div class="person__field">
+                                                <div class="person__caption">Confirm new password</div>
+                                                <input type="password" name="confirm" class="form__input">
+                                            </div>
+                                            <button type="submit" class="btn btn-primary btn-lg">Change password</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+        @@include('html/_modal.html', {})
+        @@include('html/_js.html', {})
+    </body>
+</html>

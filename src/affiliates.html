@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('html/_head.html', {
+    'title': ''
+    })
+    <body>
+        <div class="canvas">
+            <canvas id="canvas"></canvas>
+        </div>
+        <div class="wrapper">
+            @@include('html/_header-login.html', {
+            "active": 5
+            })
+            <main class="page">
+                <div class="person">
+                    <div class="person__container">
+                        <div class="person__wrapper">
+                            @@include('./html/_sidebar.html', {
+                            "active": 5
+                            })
+                            <div class="person__body">
+                                <div class="person__body-main">
+                                    <h1 class="person__title">Affiliates</h1>
+                                    <ul class="person__affiliates">
+                                        <li class="person__affiliates-block">
+                                            <div class="person__affiliates-header icon-ref-link">
+                                                Referral link
+                                            </div>
+                                            <div class="person__affiliates-body">
+                                                <a href="https://smm3.ru/ref/2sslp">https://smm3.ru/ref/2sslp</a>
+                                                <button type="button" aria-label="copy btn" class="btn-copy icon-copy"></button>
+                                            </div>
+                                        </li>
+                                        <li class="person__affiliates-block">
+                                            <div class="person__affiliates-header">
+                                                <span class="person__affiliates-icon">%</span>
+                                                Commission rate
+                                            </div>
+                                            <div class="person__affiliates-body">
+                                                3%
+                                            </div>
+                                        </li>
+                                        <li class="person__affiliates-block">
+                                            <div class="person__affiliates-header icon-money">
+                                                Minimum payout
+                                            </div>
+                                            <div class="person__affiliates-body">
+                                                1000.00 ₽
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="person__items-table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th class="text-left">Visits</th>
+                                                <th>Registrations</th>
+                                                <th>Referrals</th>
+                                                <th>Conversion rate</th>
+                                                <th>Total earnings</th>
+                                                <th>Available earnings</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-left" data-label="Visits">97</td>
+                                                <td data-label="Registrations">10</td>
+                                                <td data-label="Referrals">2</td>
+                                                <td data-label="Conversion rate">
+                                                    <div class="person__items-label">
+                                                        2.06%
+                                                    </div>
+                                                </td>
+                                                <td data-label="Total earnings"><strong>50.00 ₽</strong></td>
+                                                <td data-label="Available earnings"><strong class="color-green">50.00 ₽</strong></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+        @@include('html/_modal.html', {})
+        @@include('html/_js.html', {})
+    </body>
+</html>
