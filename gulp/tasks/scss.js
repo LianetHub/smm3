@@ -6,7 +6,7 @@ import cleanCss from 'gulp-clean-css';
 import webpcss from 'gulp-webpcss';
 import autoprefixer from 'gulp-autoprefixer';
 import groupCssMediaQueries from 'gulp-group-css-media-queries';
-import shorthand from 'gulp-shorthand';
+
 
 const sass = gulpSass(dartSass);
 
@@ -46,12 +46,7 @@ export const scss = () => {
                 })
             )
         )
-        // .pipe(
-        //     app.plugins.if(
-        //         app.isBuild,
-        //         shorthand()
-        //     )
-        // )
+
         .pipe(app.plugins.replace(/@img\//g, '../img/'))
         .pipe(app.gulp.dest(app.path.build.css))
         .pipe(
@@ -89,12 +84,7 @@ export const normalize = () => {
                 })
             )
         )
-        .pipe(
-            app.plugins.if(
-                app.isBuild,
-                shorthand()
-            )
-        )
+
         .pipe(app.gulp.dest(app.path.build.normalize))
         .pipe(
             app.plugins.if(

@@ -15,6 +15,8 @@ import * as devFunctions from './modules/functions.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    devFunctions.OS();
+    devFunctions.isWebp()
     devFunctions.select();
     devFunctions.tooltip();
     // devFunctions.animation()
