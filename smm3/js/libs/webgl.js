@@ -1,7 +1,4 @@
-'use strict';
-
-document.addEventListener("DOMContentLoaded", () => {
-
+document.addEventListener('DOMContentLoaded', () => {
     var canvas = document.getElementsByTagName('canvas')[0];
     resizeCanvas();
 
@@ -884,6 +881,7 @@ document.addEventListener("DOMContentLoaded", () => {
         updatePointerMoveData(pointer, posX, posY);
     });
 
+
     window.addEventListener('mouseup', function () {
         updatePointerUpData(pointers[0]);
     });
@@ -910,6 +908,8 @@ document.addEventListener("DOMContentLoaded", () => {
             updatePointerMoveData(pointer, posX, posY);
         }
     }, false);
+
+
 
     window.addEventListener('touchend', function (e) {
         var touches = e.changedTouches;
@@ -1047,3 +1047,4 @@ document.addEventListener("DOMContentLoaded", () => {
         return hash;
     };
 })
+

@@ -1,14 +1,6 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "RobotoCondensed";
   font-display: swap;
   src: url("../fonts/RobotoCondensed-Bold.woff2") format("woff2"), url("../fonts/RobotoCondensed-Bold.woff") format("woff");
@@ -35,15 +27,15 @@
 @font-face {
   font-family: "RobotoCondensed";
   font-display: swap;
-  src: url("../fonts/RobotoCondensed-Light.woff2") format("woff2"), url("../fonts/RobotoCondensed-Light.woff") format("woff");
-  font-weight: 300;
+  src: url("../fonts/RobotoCondensed-Regular.woff2") format("woff2"), url("../fonts/RobotoCondensed-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "RobotoCondensed";
+  font-family: "icons";
   font-display: swap;
-  src: url("../fonts/RobotoCondensed-Regular.woff2") format("woff2"), url("../fonts/RobotoCondensed-Regular.woff") format("woff");
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -53,6 +45,14 @@
   font-display: swap;
   src: url("../fonts/RobotoCondensed-SemiBold.woff2") format("woff2"), url("../fonts/RobotoCondensed-SemiBold.woff") format("woff");
   font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RobotoCondensed";
+  font-display: swap;
+  src: url("../fonts/RobotoCondensed-Light.woff2") format("woff2"), url("../fonts/RobotoCondensed-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -1187,6 +1187,10 @@ body.lock {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+}
+
+.menu__action.btn-danger {
+  min-height: 2.125rem;
 }
 
 .menu__bottom {
@@ -3400,7 +3404,7 @@ body.lock {
     display: -ms-flexbox;
     display: flex;
     padding-inline: 0.75rem;
-    padding-bottom: 0.6rem;
+    padding-block: 0.55rem;
     font-size: 1rem;
     margin-left: auto;
   }
