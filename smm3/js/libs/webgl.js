@@ -879,8 +879,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         var pointer = pointers[0];
 
-        var posX = scaleByPixelRatio(e.offsetX);
-        var posY = scaleByPixelRatio(e.offsetY);
+        var posX = scaleByPixelRatio(e.screenX);
+        var posY = scaleByPixelRatio(e.screenY);
         updatePointerMoveData(pointer, posX, posY);
     });
 

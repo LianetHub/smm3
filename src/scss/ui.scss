@@ -31,10 +31,11 @@
 .title-sm {
 	font-weight: 600;
 	line-height: 93%;
-	letter-spacing: -0.075rem;
 	text-transform: uppercase;
 	font-size: 1.125rem;
+	letter-spacing: -0.05625rem;
 	@media (min-width: $md4) {
+		letter-spacing: -0.075rem;
 		font-size: 1.5rem;
 	}
 }

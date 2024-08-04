@@ -16,7 +16,8 @@ import * as devFunctions from './modules/functions.js';
 document.addEventListener('DOMContentLoaded', () => {
 
     devFunctions.select();
-    devFunctions.tooltip()
+    devFunctions.tooltip();
+    // devFunctions.animation()
 
     // event handlers
     document.addEventListener('click', (e) => {

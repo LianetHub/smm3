@@ -38,15 +38,17 @@
 	<meta property="twitter:image:src" content="">
 	<!-- Twitter -->
 	<!-- plugnis -->
-	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240802225317">
-	<link rel="stylesheet" href="css/libs/fancybox.css?_v=20240802225317">
+	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20240804104125">
+	<link rel="stylesheet" href="css/libs/fancybox.css?_v=20240804104125">
 	<!-- plugnis -->
-	<link rel="stylesheet" href="css/reset.min.css?_v=20240802225317">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240802225317">
+	<link rel="stylesheet" href="css/reset.min.css?_v=20240804104125">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240804104125">
 </head>
 
 <body>
-	<canvas id="canvas" class="canvas"></canvas>
+	<div class="canvas">
+		<canvas id="canvas"></canvas>
+	</div>
 	<div class="wrapper">
 		<header class="header">
 			<div class="header__container">
@@ -102,8 +104,8 @@
 					</h1>
 					<p class="main__subtitle"> A diverse range of SMM services for various social&nbsp;media platforms. </p>
 					<form action="#" class="main__form form">
-						<input type="text" name="login" class="form__input" placeholder="Login">
-						<input type="password" name="psw" class="form__input" placeholder="Password">
+						<input type="text" name="login" autocomplete="username" class="form__input" placeholder="Login">
+						<input type="password" name="psw" autocomplete="current-password" class="form__input" placeholder="Password">
 						<div class="main__form-side">
 							<label class="form__checkbox" data-tooltip="" title="Remember me">
 								<input type="checkbox" name="remember" class="form__checkbox-input hidden" hidden="">
@@ -185,29 +187,37 @@
 							<div class="place__item-icon">
 								<img src="img/place/01.svg" alt="icon">
 							</div>
-							<h3 class="place__item-title title-sm">Sign up &amp; log in</h3>
-							<p class="place__item-text"> Please <a href="">Sign Up</a> and then <a href="">Sign In</a> to your account. </p>
+							<div class="place__item-body">
+								<h3 class="place__item-title title-sm">Sign up &amp; log in</h3>
+								<p class="place__item-text"> Please <a href="">Sign Up</a> and then <a href="">Sign In</a> to&nbsp;your account. </p>
+							</div>
 						</li>
 						<li class="place__item">
 							<div class="place__item-icon">
 								<img src="img/place/02.svg" alt="icon">
 							</div>
-							<h3 class="place__item-title title-sm">Adding funds</h3>
-							<p class="place__item-text"> Add funds to your account via a payment method you choose. </p>
+							<div class="place__item-body">
+								<h3 class="place__item-title title-sm">Adding funds</h3>
+								<p class="place__item-text"> Add funds to your account via a payment method you choose. </p>
+							</div>
 						</li>
 						<li class="place__item">
 							<div class="place__item-icon">
 								<img src="img/place/03.svg" alt="icon">
 							</div>
-							<h3 class="place__item-title title-sm">Choose a service</h3>
-							<p class="place__item-text"> Place orders and get ready to receive more publicity on social media. </p>
+							<div class="place__item-body">
+								<h3 class="place__item-title title-sm">Choose a service</h3>
+								<p class="place__item-text"> Place orders and get ready to receive more publicity on social media. </p>
+							</div>
 						</li>
 						<li class="place__item">
 							<div class="place__item-icon">
 								<img src="img/place/04.svg" alt="icon">
 							</div>
-							<h3 class="place__item-title title-sm">Enjoy superb results</h3>
-							<p class="place__item-text"> When your order is complete, you can enjoy incredible results. </p>
+							<div class="place__item-body">
+								<h3 class="place__item-title title-sm">Enjoy superb results</h3>
+								<p class="place__item-text"> When your order is complete, you can enjoy incredible results. </p>
+							</div>
 						</li>
 					</ol>
 				</div>
@@ -216,7 +226,7 @@
 				<div class="reviews__container">
 					<div class="section-header">
 						<h2 class="section-header__title title"> See what our customers&nbsp;say </h2>
-						<p class="section-header__desc"> We always strive to ensure our customers stay&nbsp;satisfied with our services. </p>
+						<p class="section-header__desc"> We always strive to ensure our customers stay satisfied with our services. </p>
 					</div>
 					<div class="reviews__slider swiper">
 						<div class="swiper-wrapper">
@@ -311,7 +321,7 @@
 			<section class="faq">
 				<div class="faq__container">
 					<div class="section-header">
-						<h2 class="section-header__title title"> Popular questions on&nbsp;our panel </h2>
+						<h2 class="section-header__title title"> Popular questions on our&nbsp;panel </h2>
 						<p class="section-header__desc"> Our staff picked some of the most asked questions about SMM panels and replied to them. </p>
 					</div>
 					<ul class="faq__list">
@@ -349,11 +359,11 @@
 	</div>
 	<div id="consult" class="popup">
 	</div> <!-- plugnis -->
-	<script src="js/libs/swiper-bundle.min.js?_v=20240802225317"></script>
-	<script src="js/libs/fancybox.umd.js?_v=20240802225317"></script>
-	<script src="js/libs/webgl.js?_v=20240802225317"></script>
+	<script src="js/libs/swiper-bundle.min.js?_v=20240804104125"></script>
+	<script src="js/libs/fancybox.umd.js?_v=20240804104125"></script>
+	<!-- <script src="js/libs/webgl.js?_v=20240804104125"></script> -->
 	<!-- plugnis -->
-	<script src="js/app.min.js?_v=20240802225317"></script>
+	<script src="js/app.min.js?_v=20240804104125"></script>
 </body>
 
 </html>
