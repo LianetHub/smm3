@@ -1,5 +1,5 @@
 .header {
-	padding: 1.5rem 0 1.25rem;
+	padding: 1.25rem 0;
 	@media (min-width: $md4) {
 		padding: 2.5rem 0;
 	}
@@ -14,6 +14,14 @@
 			height: 100%;
 			background: #000;
 			z-index: 11;
+		}
+	}
+	&.header-logined {
+		.menu {
+			@media (max-width: $md4) {
+				padding: rem(94) 0.94rem 2.06rem 0.94rem;
+				gap: rem(18);
+			}
 		}
 	}
 	// .header__container
@@ -33,6 +41,7 @@
 		font-size: 1.72675rem;
 		letter-spacing: -0.08631rem;
 		gap: 0.45rem;
+		order: -1;
 		@media (min-width: $md4) {
 			gap: 0.94rem;
 			letter-spacing: -0.1125rem;
@@ -49,11 +58,33 @@
 	}
 	// .header__select
 	&__select {
+		order: -1;
 		position: relative;
 		z-index: 11;
 		margin-left: 1rem;
 		@media (min-width: $md4) {
 			margin-left: 1.6rem;
+		}
+	}
+	&__wallet {
+		position: relative;
+		z-index: 11;
+		min-width: rem(80);
+		margin-left: auto;
+		@media (min-width: $md4) {
+			margin-left: rem(10);
+		}
+		.dropdown__button {
+			line-height: 2.3;
+		}
+		order: 1;
+		& + .menu {
+			.menu__actions {
+				margin-left: 0.38rem;
+			}
+		}
+		& ~ .menu__icon {
+			margin-left: rem(12);
 		}
 	}
 	// .header__menu
@@ -62,9 +93,7 @@
 }
 
 .menu {
-	flex: 1 1 auto;
-	display: flex;
-	align-items: center;
+	display: contents;
 	@media (max-width: $md4) {
 		position: fixed;
 		top: 0;
@@ -74,6 +103,7 @@
 		background: #000;
 		z-index: 10;
 		flex-direction: column;
+		display: flex;
 		align-items: stretch;
 		overflow-y: auto;
 		overflow-x: hidden;
@@ -138,8 +168,20 @@
 	}
 	// .menu__actions
 	&__actions {
+		order: 1;
+		margin-left: auto;
 		display: flex;
 		gap: 0.31rem;
+	}
+	&__btn {
+		display: none;
+		@media (min-width: $md4) {
+			display: flex;
+			padding-inline: 0.75rem;
+			padding-bottom: 0.6rem;
+			font-size: 1rem;
+			margin-left: auto;
+		}
 	}
 	// .menu__action
 	&__action {
@@ -150,6 +192,23 @@
 	}
 	// .menu__icon
 	&__icon {
+	}
+	&__bottom {
+		@media (max-width: $md4) {
+			.header__select {
+				margin-left: 0;
+			}
+		}
+		display: flex;
+		@media (min-width: $md4) {
+			display: contents;
+		}
+		.menu__actions {
+			flex: 1 1 auto;
+			@media (min-width: $md4) {
+				flex: 0 1 auto;
+			}
+		}
 	}
 }
 

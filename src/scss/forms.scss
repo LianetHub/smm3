@@ -167,6 +167,16 @@
 			color: #fff;
 		}
 	}
+	&.btn-danger {
+		color: #eb5757;
+		border: rem(1) solid rgba(255, 255, 255, 0.34);
+		&:hover,
+		&:active {
+			background: #eb5757;
+			border-color: #eb5757;
+			color: #fff;
+		}
+	}
 	&.btn-lg {
 		padding: 0.85rem 2rem;
 		@media (min-width: $md4) {

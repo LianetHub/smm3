@@ -167,11 +167,16 @@
 // 	}
 // }
 
-// .tablet-only {
-// 	@media (min-width: $md2) {
-// 		display: none;
-// 	}
-// }
+.mobile-only {
+	@media (min-width: $md4) {
+		display: none !important;
+	}
+}
+.pc-only {
+	@media (max-width: $md4) {
+		display: none !important;
+	}
+}
 
 // .pagination {
 // 	display: flex;

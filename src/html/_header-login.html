@@ -1,0 +1,90 @@
+<header class="header header-logined">
+    <div class="header__container">
+        <a href="/" class="header__logo">
+            <span class="header__logo-icon">
+                <img src="@img/butterfly.png" alt="logo icon">
+            </span>
+            Smm3
+        </a>
+        <div class="header__wallet dropdown dropdown-accent">
+            <button type="button" class="dropdown__button icon-chevron" aria-expanded="false" aria-haspopup="true">
+                500 ₽
+            </button>
+            <div class="dropdown__content" aria-hidden="true">
+                <ul class="dropdown__list" role="listbox">
+                    <li role="option" data-value="500 ₽" aria-checked="true" class="dropdown__list-item">500 ₽</li>
+                    <li role="option" data-value="1000 ₽" class="dropdown__list-item">1000 ₽</li>
+                </ul>
+                <input type="text" name="wallet" id="wallet" class="dropdown__input hidden" hidden value="500 ₽">
+            </div>
+        </div>
+        <div class="header__menu menu">
+            <a href="" class="menu__btn icon-user btn btn-primary"></a>
+            <div class="menu__person mobile-only">
+                <nav class="person__sidebar-nav" aria-label="person menu">
+                    <ul class="person__sidebar-list">
+                        <li class="person__sidebar-item">
+                            <a href="" class="person__sidebar-link icon-bag@@if(active===1){ active}">New order</a>
+                        </li>
+                        <li class="person__sidebar-item">
+                            <a href="" class="person__sidebar-link icon-bag-happy@@if(active===2){ active}">Orders <span>6</span></a>
+                        </li>
+                        <li class="person__sidebar-item">
+                            <a href="" class="person__sidebar-link icon-category@@if(active===3){ active}">Services</a>
+                        </li>
+                        <li class="person__sidebar-item">
+                            <a href="" class="person__sidebar-link icon-wallet-money@@if(active===4){ active}">Add funds</a>
+                        </li>
+                        <li class="person__sidebar-item">
+                            <a href="" class="person__sidebar-link icon-users@@if(active===5){ active}">Affiliates</a>
+                        </li>
+                        <li class="person__sidebar-item">
+                            <a href="" class="person__sidebar-link icon-shopping-cart@@if(active===6){ active}">Mass order</a>
+                        </li>
+                        <li class="person__sidebar-item">
+                            <a href="" class="person__sidebar-link icon-global@@if(active===7){ active}">Child panel</a>
+                        </li>
+                        <li class="person__sidebar-item">
+                            <a href="" class="person__sidebar-link icon-connection@@if(active===8){ active}">API</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="" class="person__support">
+                    <span class="person__support-header">
+                        <span class="person__support-main">
+                            <span class="person__support-title">Support 24/7</span>
+                            <span class="person__support-subtitle">Contacts us anytime</span>
+                        </span>
+                        <span class="person__support-notify">
+                            <img src="@img/sms-notification.svg" alt="icon">
+                            <span class="person__support-quantity">2</span>
+                        </span>
+                    </span>
+                    <span class="person__support-btn">Chat</span>
+                </a>
+            </div>
+            <div class="menu__bottom">
+                <div class="header__select dropdown">
+                    <button type="button" class="dropdown__button icon-chevron" aria-expanded="false" aria-haspopup="true">
+                        ENG
+                    </button>
+                    <div class="dropdown__content" aria-hidden="true">
+                        <ul class="dropdown__list" role="listbox">
+                            <li role="option" data-value="ENG" aria-checked="true" class="dropdown__list-item">ENG</li>
+                            <li role="option" data-value="RUS" class="dropdown__list-item">RUS</li>
+                        </ul>
+                        <input type="text" name="lang" id="lang" class="dropdown__input hidden" hidden value="ENG">
+                    </div>
+                </div>
+                <div class="menu__actions">
+                    <a href="/signup.html" class="menu__action btn btn-danger">Log out</a>
+                </div>
+            </div>
+        </div>
+        <button type="button" aria-label="Open mobile menu" class="menu__icon icon-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</header>
